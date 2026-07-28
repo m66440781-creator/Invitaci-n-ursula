@@ -644,3 +644,14 @@ body{
     position:relative;
     z-index:5;
 }
+.adornoFresa{
+    position:absolute;
+    z-index:1;
+}
+
+#invitacionFinal h1,
+#invitacionFinal h2,
+#invitacionFinal p{
+    position:relative;
+    z-index:10;
+}
