@@ -985,3 +985,76 @@ body{
     0 0 30px rgba(255,105,180,.5) !important;
 
 }
+/* =================================
+   PÁGINAS DE CUENTO MÁGICO
+================================= */
+
+#libro,
+#invitacionFinal{
+
+    background:
+    radial-gradient(circle at 50% 0%, rgba(255,255,255,.9), transparent 35%),
+    linear-gradient(180deg,#ffe0ee,#fff0f7) !important;
+
+    border:2px solid #ffb6d9 !important;
+
+    box-shadow:
+    0 20px 60px rgba(255,105,180,.25),
+    0 0 35px rgba(255,182,217,.7) !important;
+
+}
+
+
+/* Brillo suave en la orilla */
+
+#libro::before,
+#invitacionFinal::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:8px;
+
+    border-radius:18px;
+
+    border:1px solid rgba(255,255,255,.8);
+
+    pointer-events:none;
+
+}
+
+
+/* Pequeños destellos */
+
+#libro::after,
+#invitacionFinal::after{
+
+    content:"✨";
+
+    position:absolute;
+
+    top:15px;
+
+    right:20px;
+
+    font-size:25px;
+
+    animation:destelloCuento 2s infinite alternate;
+
+}
+
+
+@keyframes destelloCuento{
+
+    from{
+        opacity:.3;
+        transform:scale(.8);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1.2);
+    }
+
+}
