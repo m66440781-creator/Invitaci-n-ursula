@@ -1,5 +1,10 @@
+/*==================================
+        INVITACIÓN ÚRSULA
+        ROSITA FRESITA
+==================================*/
+
 *{
-  margin:0;
+    margin:0;
     padding:0;
     box-sizing:border-box;
 }
@@ -9,17 +14,26 @@ html{
 }
 
 body{
-    overflow:hidden;
     font-family:'Nunito',sans-serif;
+    overflow:hidden;
     background:#ffd8e6;
 }
 
-/* Loader */
+/*=========================
+        LOADER
+=========================*/
 
 #loader{
-    display:none 
+    position:fixed;
+    inset:0;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(180deg,#ffd4ea,#fff3f8);
+    z-index:9999;
+    transition:1s;
 }
-
 
 #loader.oculto{
     opacity:0;
@@ -28,116 +42,72 @@ body{
 
 #loader h1{
     font-family:'Pacifico',cursive;
+    color:#e63f82;
     font-size:3rem;
-    color:#e6397b;
     margin-top:20px;
 }
 
 #loader p{
-    color:#8a4a5d;
     margin-top:10px;
+    color:#87556a;
     font-size:1.1rem;
 }
 
 .fresa{
     font-size:70px;
-    animation:flotar 2s infinite ease-in-out;
+    animation:flotar 2s ease-in-out infinite;
 }
 
-/* Contenido */
+/*=========================
+        CONTENIDO
+=========================*/
 
 #contenido{
+    position:relative;
     width:100%;
     height:100vh;
-    position:relative;
     overflow:hidden;
     display:block;
 }
 
-/* Fondo */
+/*=========================
+          FONDO
+=========================*/
 
 .fondo{
     position:absolute;
     inset:0;
-    background:
-    linear-gradient(#ffd4ea,#ffeef7);
+    background:linear-gradient(#ffd4ea,#fff2f8);
+    z-index:0;
 }
-
-/* Luces */
 
 .fondo::before{
-
-content:"";
-
-position:absolute;
-
-width:200%;
-
-height:200%;
-
-background:
-radial-gradient(circle,#ffffff88 1px,transparent 2px);
-
-background-size:60px 60px;
-
-animation:brillos 20s linear infinite;
-
-opacity:.6;
-
+    content:"";
+    position:absolute;
+    inset:-100%;
+    background:
+    radial-gradient(circle,#ffffffaa 1px,transparent 2px);
+    background-size:60px 60px;
+    animation:brillos 20s linear infinite;
+    opacity:.6;
 }
 
-/* Flores */
+/*=========================
+         FLORES
+=========================*/
 
 .flores{
-
-position:absolute;
-
-inset:0;
-
-pointer-events:none;
-
-overflow:hidden;
-
+    position:absolute;
+    inset:0;
+    overflow:hidden;
+    pointer-events:none;
+    z-index:1;
 }
 
-/* Animaciones */
+/*=========================
+          SOBRE
+=========================*/
 
-@keyframes flotar{
-
-0%{
-
-transform:translateY(0);
-
-}
-
-50%{
-
-transform:translateY(-15px);
-
-}
-
-100%{
-
-transform:translateY(0);
-
-}
-
-}
-
-@keyframes brillos{
-
-0%{
-
-transform:translateY(0);
-
-}
-
-100%{
-
-transform:translateY(-300px);
-
-}
-  
 .sobre{
     position:absolute;
     left:50%;
@@ -145,9 +115,14 @@ transform:translateY(-300px);
     transform:translate(-50%,-50%);
     width:320px;
     height:220px;
-    perspective:1200px;
     cursor:pointer;
+    perspective:1200px;
     transition:.8s;
+    z-index:5;
+}
+
+.sobre:hover{
+    transform:translate(-50%,-52%) scale(1.03);
 }
 
 .carta{
@@ -155,85 +130,68 @@ transform:translateY(-300px);
     width:100%;
     height:100%;
     background:#ffeaf3;
-    border-radius:12px;
-    box-shadow:0 20px 45px rgba(0,0,0,.25);
+    border-radius:14px;
+    box-shadow:0 18px 45px rgba(0,0,0,.25);
     overflow:hidden;
 }
-
-/* Frente del sobre */
 
 .carta::before{
     content:"";
     position:absolute;
-    bottom:0;
-    left:0;
-    width:100%;
-    height:100%;
+    inset:0;
     clip-path:polygon(0 100%,50% 45%,100% 100%);
-    background:#ff8fbc;
+    background:#ff92bf;
     z-index:2;
 }
-
-/* Laterales */
 
 .carta::after{
     content:"";
     position:absolute;
     inset:0;
-    border:8px solid #ff9fc8;
-    border-radius:12px;
+    border:8px solid #ffacd0;
+    border-radius:14px;
     pointer-events:none;
 }
-
-/* Tapa */
 
 .tapa{
     position:absolute;
     width:100%;
     height:100%;
-    background:#ff78b2;
+    background:#ff79b3;
     clip-path:polygon(0 0,50% 55%,100% 0);
     transform-origin:top;
     transition:1s;
     z-index:5;
 }
 
-/* Sello */
-
 .sello{
     position:absolute;
-    width:90px;
-    height:90px;
-    background:#fff;
-    border-radius:50%;
     left:50%;
     top:55%;
     transform:translate(-50%,-50%);
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    background:#fff;
     display:flex;
     justify-content:center;
     align-items:center;
     font-size:42px;
-    box-shadow:0 0 25px rgba(255,105,180,.45);
-    z-index:6;
+    box-shadow:0 0 25px rgba(255,105,180,.4);
     animation:latido 2s infinite;
+    z-index:6;
 }
 
 .carta h2{
     position:absolute;
-    width:100%;
     bottom:20px;
+    width:100%;
     text-align:center;
-    color:#d63b76;
     font-family:'Pacifico',cursive;
+    color:#d64079;
     font-size:28px;
     z-index:7;
 }
-
-.sobre:hover{
-    transform:translate(-50%,-52%) scale(1.03);
-}
-
-/* Sobre abierto */
 
 .sobre.abierto .tapa{
     transform:rotateX(180deg);
@@ -242,8 +200,9 @@ transform:translateY(-300px);
 .sobre.abierto{
     transform:translate(-50%,-65%);
 }
-
-/* Libro */
+/*=========================
+           LIBRO
+=========================*/
 
 #libro{
     position:absolute;
@@ -259,6 +218,7 @@ transform:translateY(-300px);
     opacity:0;
     visibility:hidden;
     transition:1s;
+    z-index:20;
 }
 
 #libro.mostrar{
@@ -271,7 +231,7 @@ transform:translateY(-300px);
     font-family:'Pacifico',cursive;
     color:#d83d7a;
     text-align:center;
-    margin-bottom:20px
+    margin-bottom:20px;
 }
 
 .pagina p{
@@ -279,6 +239,10 @@ transform:translateY(-300px);
     color:#6f5a61;
     min-height:130px;
 }
+
+/*=========================
+          BOTÓN
+=========================*/
 
 #continuar{
     margin-top:25px;
@@ -292,47 +256,26 @@ transform:translateY(-300px);
     font-weight:bold;
     cursor:pointer;
     transition:.3s;
+    box-shadow:0 10px 25px rgba(255,105,180,.35);
 }
 
 #continuar:hover{
     background:#e84c8d;
 }
 
-/* Animaciones */
-
-@keyframes latido{
-
-0%{
-transform:scale(1);
+#continuar:active{
+    transform:scale(.97);
 }
 
-50%{
-transform:translate(-50%,-50%) scale(1.08);
-}
-
-100%{
-transform:translate(-50%,-50%) scale(1);
-}
-
-}
-/*==================================
-      JARDÍN MÁGICO
-==================================*/
+/*=========================
+     ELEMENTOS MÁGICOS
+=========================*/
 
 .flor{
     position:absolute;
     font-size:26px;
     animation:caerFlor linear infinite;
     pointer-events:none;
-    user-select:none;
-}
-
-.mariposa{
-    position:absolute;
-    font-size:28px;
-    animation:volar 10s linear infinite;
-    pointer-events:none;
-    user-select:none;
 }
 
 .fresaFloat{
@@ -340,341 +283,155 @@ transform:translate(-50%,-50%) scale(1);
     font-size:24px;
     animation:fresaCae linear infinite;
     pointer-events:none;
-    user-select:none;
+}
+
+.mariposa{
+    position:absolute;
+    font-size:28px;
+    animation:volar 10s linear infinite;
+    pointer-events:none;
 }
 
 .estrella{
     position:absolute;
     width:5px;
     height:5px;
-    background:#fff;
     border-radius:50%;
+    background:#fff;
     box-shadow:0 0 12px #fff;
     animation:brillar 2.5s infinite alternate;
 }
 
-/*======================
-      BOTONES
-======================*/
-
-button{
-
-font-family:'Nunito',sans-serif;
-
-}
-
-#continuar{
-
-box-shadow:0 10px 25px rgba(255,105,180,.35);
-
-}
-
-#continuar:active{
-
-transform:scale(.97);
-
-}
-
-/*======================
-      RESPONSIVE
-======================*/
+/*=========================
+       RESPONSIVE
+=========================*/
 
 @media(max-width:480px){
 
-#loader h1{
+    #loader h1{
+        font-size:2.3rem;
+    }
 
-font-size:2.3rem;
+    .sobre{
+        width:290px;
+        height:200px;
+    }
 
-}
+    #libro{
+        width:92%;
+        padding:22px;
+    }
 
-.sobre{
-
-width:290px;
-
-height:200px;
-
-}
-
-#libro{
-
-padding:22px;
-
-}
-
-.pagina h1{
-
-font-size:1.8rem;
+    .pagina h1{
+        font-size:1.8rem;
+    }
 
 }
 
+/*=========================
+        ANIMACIONES
+=========================*/
+
+@keyframes flotar{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-15px);
+    }
+
 }
 
-/*======================
-     ANIMACIONES
-======================*/
+@keyframes brillos{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    100%{
+        transform:translateY(-300px);
+    }
+
+}
+
+@keyframes latido{
+
+    0%,100%{
+        transform:translate(-50%,-50%) scale(1);
+    }
+
+    50%{
+        transform:translate(-50%,-50%) scale(1.08);
+    }
+
+}
 
 @keyframes caerFlor{
 
-0%{
+    0%{
+        transform:translateY(-120px) rotate(0deg);
+        opacity:0;
+    }
 
-transform:translateY(-120px) rotate(0deg);
+    10%{
+        opacity:1;
+    }
 
-opacity:0;
-
-}
-
-10%{
-
-opacity:1;
-
-}
-
-100%{
-
-transform:translateY(120vh) rotate(360deg);
-
-opacity:.9;
-
-}
+    100%{
+        transform:translateY(120vh) rotate(360deg);
+        opacity:.9;
+    }
 
 }
 
 @keyframes fresaCae{
 
-0%{
+    0%{
+        transform:translateY(-120px);
+    }
 
-transform:translateY(-120px);
-
-}
-
-100%{
-
-transform:translateY(120vh);
-
-}
+    100%{
+        transform:translateY(120vh);
+    }
 
 }
 
 @keyframes volar{
 
-0%{
+    0%{
+        transform:translate(-10vw,70vh);
+    }
 
-transform:translate(-10vw,70vh);
+    25%{
+        transform:translate(20vw,40vh);
+    }
 
-}
+    50%{
+        transform:translate(50vw,55vh);
+    }
 
-25%{
+    75%{
+        transform:translate(80vw,25vh);
+    }
 
-transform:translate(20vw,40vh);
-
-}
-
-50%{
-
-transform:translate(50vw,55vh);
-
-}
-
-75%{
-
-transform:translate(80vw,25vh);
-
-}
-
-100%{
-
-transform:translate(110vw,60vh);
-
-}
+    100%{
+        transform:translate(110vw,60vh);
+    }
 
 }
 
 @keyframes brillar{
 
-from{
+    from{
+        opacity:.2;
+        transform:scale(.6);
+    }
 
-opacity:.2;
+    to{
+        opacity:1;
+        transform:scale(1.5);
+    }
 
-transform:scale(.6);
-
-}
-
-to{
-
-opacity:1;
-
-transform:scale(1.5);
-
-}
-
-}
-#contenido{
-    background:red !important;
-    display:block !important;
-    z-index:9999;
-}
-
-#contenido *{
-    color:black !important;
-}
-#loader{
-    display:none !important;
-}
-
-#contenido{
-    display:block !important;
-    opacity:1 !important;
-    visibility:visible !important;
-    position:relative;
-    z-index:9999;
-}
-
-.sobre{
-    display:block !important;
-    opacity:1 !important;
-    visibility:visible !important;
-}
-.sobre{
-    z-index:100;
-}
-.fondo{
-    z-index:1;
-}
-
-.flores{
-    z-index:2;
-}
-
-.sobre{
-    z-index:3;
-}
-.fondo{
-    z-index:0;
-}
-
-.flores{
-    z-index:1;
-}
-
-.sobre{
-    z-index:10;
-    display:block;
-    visibility:visible;
-    opacity:1;
-}
-.sobre{
-    display:block !important;
-    opacity:1 !important;
-    visibility:visible !important;
-    z-index:99999 !important;
-    background:red;
-}
-
-.carta{
-    display:block !important;
-    opacity:1 !important;
-    visibility:visible !important;
-}
-
-.tapa{
-    display:block !important;
-    opacity:1 !important;
-    visibility:visible !important;
-}
-.sobre{
-    position:absolute;
-    left:50%;
-    top:52%;
-    transform:translate(-50%,-50%);
-    width:320px;
-    height:220px;
-    z-index:9999;
-    display:block;
-}
-
-.carta{
-    position:absolute;
-    width:100%;
-    height:100%;
-    background:#ffeaf3;
-    border-radius:12px;
-    display:block;
-    opacity:1;
-}
-
-.tapa{
-    position:absolute;
-    width:100%;
-    height:100%;
-    background:#ff78b2;
-    display:block;
-}
-.sobre{
-    position:fixed !important;
-    left:50% !important;
-    top:50% !important;
-    transform:translate(-50%,-50%) !important;
-    width:320px !important;
-    height:220px !important;
-    background:red !important;
-    z-index:999999 !important;
-    display:block !important;
-    opacity:1 !important;
-    visibility:visible !important;
-}
-
-.carta{
-    display:none;
-}
-
-.tapa{
-    display:none;
-}
-.sobre{
-    position:fixed !important;
-    left:50% !important;
-    top:50% !important;
-    width:320px !important;
-    height:220px !important;
-    transform:translate(-50%,-50%) !important;
-    background:red !important;
-    z-index:999999 !important;
-}
-
-.carta{
-    display:none !important;
-}
-
-.tapa{
-    display:none !important;
-}
-.sobre2{
-    position:fixed;
-    width:320px;
-    height:220px;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-    background:red;
-    z-index:999999;
-}
-.sobre2{
-    position:fixed;
-    width:320px;
-    height:220px;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-    background:red;
-    z-index:9999999;
-}
-#pruebaSobre{
-    position:fixed;
-    width:320px;
-    height:220px;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-    background:red;
-    z-index:9999999;
-}
+  }
