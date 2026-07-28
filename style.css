@@ -435,3 +435,90 @@ body{
     }
 
 }
+/*=========================
+   INVITACIÓN FINAL
+=========================*/
+
+#invitacionFinal{
+
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%) scale(.7);
+
+    width:340px;
+    max-width:90%;
+
+    padding:30px;
+
+    background:#fffdf8;
+
+    border-radius:25px;
+
+    text-align:center;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.25);
+
+    opacity:0;
+    visibility:hidden;
+
+    transition:1s;
+
+    z-index:50;
+}
+
+
+#invitacionFinal.mostrar{
+
+    opacity:1;
+    visibility:visible;
+
+    transform:translate(-50%,-50%) scale(1);
+
+}
+
+
+#invitacionFinal h1{
+
+    font-family:'Pacifico',cursive;
+
+    color:#e63f82;
+
+    margin-bottom:15px;
+
+}
+
+
+#invitacionFinal h2{
+
+    color:#ff6fa8;
+
+    margin-bottom:20px;
+
+}
+
+
+#invitacionFinal p{
+
+    color:#6f5a61;
+
+    line-height:1.6;
+
+    margin:12px 0;
+
+}
+
+
+#invitacionFinal .mensaje{
+
+    margin-top:20px;
+
+    padding:15px;
+
+    background:#ffeaf3;
+
+    border-radius:15px;
+
+    font-style:italic;
+
+}
