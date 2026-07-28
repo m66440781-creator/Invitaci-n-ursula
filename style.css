@@ -1134,3 +1134,16 @@ background:radial-gradient(circle at top,#ffffffaa,transparent 35%),
 .sello{
     position:absolute;
 }
+/* Forzar sello arriba de la tapa */
+.tapa{
+    z-index:2;
+}
+
+.carta{
+    z-index:1;
+}
+
+.sello{
+    z-index:50;
+    transform:translate(-50%,-50%);
+}
