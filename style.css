@@ -622,7 +622,7 @@ body{
 
     left:auto;
 
-    right:15px;
+    right:150px;
 
 }
 /* Efectos flotantes encima de todo */
@@ -632,7 +632,7 @@ body{
 .mariposa,
 .estrella{
 
-    z-index:200 !important;
+    z-index:60 !important;
     position:fixed !important;
 
 }
