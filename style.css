@@ -562,3 +562,22 @@ transform:scale(1.5);
     visibility:visible;
     opacity:1;
 }
+.sobre{
+    display:block !important;
+    opacity:1 !important;
+    visibility:visible !important;
+    z-index:99999 !important;
+    background:red;
+}
+
+.carta{
+    display:block !important;
+    opacity:1 !important;
+    visibility:visible !important;
+}
+
+.tapa{
+    display:block !important;
+    opacity:1 !important;
+    visibility:visible !important;
+}
