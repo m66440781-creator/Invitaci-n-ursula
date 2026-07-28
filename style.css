@@ -630,3 +630,21 @@ transform:scale(1.5);
 .tapa{
     display:none;
 }
+.sobre{
+    position:fixed !important;
+    left:50% !important;
+    top:50% !important;
+    width:320px !important;
+    height:220px !important;
+    transform:translate(-50%,-50%) !important;
+    background:red !important;
+    z-index:999999 !important;
+}
+
+.carta{
+    display:none !important;
+}
+
+.tapa{
+    display:none !important;
+}
