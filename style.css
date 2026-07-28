@@ -524,3 +524,20 @@ transform:scale(1.5);
 #contenido *{
     color:black !important;
 }
+#loader{
+    display:none !important;
+}
+
+#contenido{
+    display:block !important;
+    opacity:1 !important;
+    visibility:visible !important;
+    position:relative;
+    z-index:9999;
+}
+
+.sobre{
+    display:block !important;
+    opacity:1 !important;
+    visibility:visible !important;
+}
