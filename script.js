@@ -16,12 +16,12 @@ let i = 0;
 // Loader
 window.addEventListener("load", () => {
 
-    setTimeout(() => {
+setTimeout(() => {
 
-        loader.classList.add("oculto");
-        contenido.classList.add("mostrar");
+    loader.style.display = "none";
+    contenido.style.display = "block";
 
-    }, 2200);
+}, 2200);
 
 });
 
