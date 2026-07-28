@@ -15,13 +15,14 @@ let i = 0;
 
 // Loader
 window.addEventListener("load", () => {
+window.addEventListener("load", () => {
 
-setTimeout(() => {
+    setTimeout(() => {
 
-    loader.style.display = "none";
-    contenido.style.display = "block";
+        loader.style.display = "none";
+        contenido.style.display = "block";
 
-}, 2200);
+    }, 2200);
 
 });
 
