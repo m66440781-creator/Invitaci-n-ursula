@@ -471,6 +471,14 @@ body{
     z-index:50;
 
 }
+#invitacionFinal.mostrar{
+
+    opacity:1;
+    visibility:visible;
+
+    transform:translate(-50%,-50%) scale(.95);
+
+}
 
 @media(max-width:480px){
 
