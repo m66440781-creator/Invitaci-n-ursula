@@ -622,7 +622,11 @@ body{
 
     left:auto;
 
-    right:150px;
+    right:15px;
+
+    top:5px;
+
+}
 
 }
 /* Efectos flotantes encima de todo */
@@ -635,4 +639,8 @@ body{
     z-index:60 !important;
     position:fixed !important;
 
+}
+#invitacionFinal h1{
+    position:relative;
+    z-index:5;
 }
