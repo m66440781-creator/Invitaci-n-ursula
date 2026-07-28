@@ -469,7 +469,7 @@ body{
 
     transition:1s;
 
-    z-index:50;
+    z-index:100;
 
 }
 
@@ -623,5 +623,16 @@ body{
     left:auto;
 
     right:15px;
+
+}
+/* Efectos flotantes encima de todo */
+
+.flor,
+.fresaFloat,
+.mariposa,
+.estrella{
+
+    z-index:200 !important;
+    position:fixed !important;
 
 }
