@@ -572,3 +572,73 @@ body{
     }
 
 }
+/* ✨ Resplandor mágico en textos */
+
+#loader h1,
+.pagina h1{
+
+    text-shadow:
+    0 0 8px #ffb6d9,
+    0 0 18px #ff69b4,
+    0 0 35px #ffb6d9;
+
+    animation:brilloTexto 2s infinite alternate;
+
+}
+
+
+@keyframes brilloTexto{
+
+    from{
+
+        text-shadow:
+        0 0 5px #ffc1dc,
+        0 0 15px #ff69b4;
+
+    }
+
+    to{
+
+        text-shadow:
+        0 0 15px #ff69b4,
+        0 0 35px #ffb6d9,
+        0 0 50px #ff69b4;
+
+    }
+
+}
+/* ✨ Resplandor mágico en textos */
+
+#loader h1,
+.pagina h1{
+
+    text-shadow:
+    0 0 8px #ffb6d9,
+    0 0 18px #ff69b4,
+    0 0 35px #ffb6d9;
+
+    animation:brilloTexto 2s infinite alternate;
+
+}
+
+
+@keyframes brilloTexto{
+
+    from{
+
+        text-shadow:
+        0 0 5px #ffc1dc,
+        0 0 15px #ff69b4;
+
+    }
+
+    to{
+
+        text-shadow:
+        0 0 15px #ff69b4,
+        0 0 35px #ffb6d9,
+        0 0 50px #ff69b4;
+
+    }
+
+}
