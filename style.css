@@ -1008,3 +1008,22 @@ background:radial-gradient(circle at top,#ffffffaa,transparent 35%),
     }
 
 }
+/* =========================
+   CORRECCIÓN FINAL SOBRE
+========================= */
+
+.sobre{
+    transition:
+    transform .8s ease,
+    opacity .8s ease;
+}
+
+.sobre.abierto{
+    transform:translate(-50%,-140%) scale(.65);
+    opacity:0;
+    pointer-events:none;
+}
+
+.sobre.abierto .tapa{
+    transform:rotateX(180deg);
+}
