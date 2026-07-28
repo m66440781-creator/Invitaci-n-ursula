@@ -1,32 +1,172 @@
-// Placeholder script.js
-// Aquí puedes añadir tu JavaScript para controlar la invitación (abrir, cerrar, RSVP, audio, etc.).
+// ===============================
+// INVITACIÓN ÚRSULA NAZARETH
+// ROSITA FRESITA
+// ===============================
 
-document.addEventListener('DOMContentLoaded', () => {
-  const openBtn = document.getElementById('openBtn');
-  const closeBtn = document.getElementById('closeBtn');
-  const rsvpBtn = document.getElementById('rsvpBtn');
-  const invitation = document.getElementById('invitation');
-  const music = document.getElementById('music');
+const loader = document.getElementById("loader");
+const contenido = document.getElementById("contenido");
+const sobre = document.getElementById("sobre");
+const libro = document.getElementById("libro");
+const historia = document.getElementById("historia");
 
-  function showInvitation(){
-    invitation.classList.remove('hidden');
-    invitation.setAttribute('aria-hidden', 'false');
-    if (music) music.play().catch(()=>{ console.log('Autoplay bloqueado'); });
-  }
+const texto = "Había una vez una pequeña llamada Úrsula Nazareth... que estaba a punto de cumplir 4 añitos. Y quiere compartir este día tan especial contigo. 🍓✨";
 
-  function hideInvitation(){
-    invitation.classList.add('hidden');
-    invitation.setAttribute('aria-hidden', 'true');
-    if(music){ music.pause(); music.currentTime = 0; }
-  }
+let i = 0;
 
-  openBtn?.addEventListener('click', showInvitation);
-  closeBtn?.addEventListener('click', hideInvitation);
-  rsvpBtn?.addEventListener('click', () => {
-    alert('¡Gracias! Tu asistencia ha sido registrada (ejemplo).');
-  });
+// Loader
+window.addEventListener("load", () => {
 
-  document.addEventListener('keydown', (e) => {
-    if(e.key === 'Escape' && !invitation.classList.contains('hidden')) hideInvitation();
-  });
+    setTimeout(() => {
+
+        loader.classList.add("oculto");
+        contenido.classList.add("mostrar");
+
+    }, 2200);
+
 });
+
+// Abrir sobre
+sobre.addEventListener("click", () => {
+
+    sobre.classList.add("abierto");
+
+    setTimeout(() => {
+
+        libro.classList.add("mostrar");
+
+        escribirHistoria();
+
+        crearFlores(20);
+        crearFresas(15);
+        crearMariposas(4);
+        crearEstrellas(40);
+
+        if(typeof confetti === "function"){
+
+            confetti({
+                particleCount:180,
+                spread:90,
+                origin:{ y:.6 }
+            });
+
+        }
+
+    },900);
+
+});
+
+// Máquina de escribir
+
+function escribirHistoria(){
+
+    historia.innerHTML="";
+
+    i=0;
+
+    let intervalo=setInterval(()=>{
+
+        historia.innerHTML+=texto.charAt(i);
+
+        i++;
+
+        if(i>=texto.length){
+
+            clearInterval(intervalo);
+
+        }
+
+    },35);
+
+}
+
+// FLORES
+
+function crearFlores(cantidad){
+
+    for(let i=0;i<cantidad;i++){
+
+        const flor=document.createElement("div");
+
+        flor.className="flor";
+
+        flor.innerHTML="🌸";
+
+        flor.style.left=Math.random()*100+"vw";
+
+        flor.style.animationDuration=(6+Math.random()*5)+"s";
+
+        flor.style.animationDelay=Math.random()*4+"s";
+
+        document.body.appendChild(flor);
+
+    }
+
+}
+
+// FRESAS
+
+function crearFresas(cantidad){
+
+    for(let i=0;i<cantidad;i++){
+
+        const fresa=document.createElement("div");
+
+        fresa.className="fresaFloat";
+
+        fresa.innerHTML="🍓";
+
+        fresa.style.left=Math.random()*100+"vw";
+
+        fresa.style.animationDuration=(8+Math.random()*6)+"s";
+
+        fresa.style.animationDelay=Math.random()*3+"s";
+
+        document.body.appendChild(fresa);
+
+    }
+
+}
+
+// MARIPOSAS
+
+function crearMariposas(cantidad){
+
+    for(let i=0;i<cantidad;i++){
+
+        const mariposa=document.createElement("div");
+
+        mariposa.className="mariposa";
+
+        mariposa.innerHTML="🦋";
+
+        mariposa.style.top=Math.random()*80+"vh";
+
+        mariposa.style.animationDelay=(i*2)+"s";
+
+        document.body.appendChild(mariposa);
+
+    }
+
+}
+
+// DESTELLOS
+
+function crearEstrellas(cantidad){
+
+    for(let i=0;i<cantidad;i++){
+
+        const estrella=document.createElement("div");
+
+        estrella.className="estrella";
+
+        estrella.style.left=Math.random()*100+"vw";
+
+        estrella.style.top=Math.random()*100+"vh";
+
+        estrella.style.animationDelay=Math.random()*2+"s";
+
+        document.body.appendChild(estrella);
+
+    }
+
+          }
