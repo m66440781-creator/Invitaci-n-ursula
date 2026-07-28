@@ -1389,3 +1389,35 @@ body{
     width:100%;
 
 }
+/* =================================
+   RECUPERAR TAMAÑO ORIGINAL
+================================= */
+
+#libro{
+
+    width:340px !important;
+    max-width:92% !important;
+
+    padding:30px !important;
+
+    background:#ffeef7 !important;
+
+}
+
+
+#libro .pagina{
+
+    width:100%;
+
+}
+
+
+#invitacionFinal{
+
+    width:100% !important;
+
+    margin-top:20px;
+
+    box-sizing:border-box;
+
+}
