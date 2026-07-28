@@ -181,7 +181,7 @@ continuar.addEventListener("click", () => {
 
     setTimeout(() => {
 
-        alert("Aquí aparecerá la invitación de Úrsula");
+    document.getElementById("invitacionFinal").classList.add("mostrar");
 
     },1000);
 
