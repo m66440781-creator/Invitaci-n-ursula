@@ -15,12 +15,10 @@ let i = 0;
 
 // Loader
 window.addEventListener("load", () => {
-window.addEventListener("load", () => {
 
     setTimeout(() => {
 
-        loader.style.display = "none";
-        contenido.style.display = "block";
+        loader.classList.add("oculto");
 
     }, 2200);
 
@@ -170,5 +168,4 @@ function crearEstrellas(cantidad){
 
     }
 
-          }
-console.log(document.querySelector(".sobre"));
+    
