@@ -1205,3 +1205,129 @@ body{
     }
 
 }
+/* =================================
+   INVITACIÓN FINAL MÁGICA
+================================= */
+
+#invitacionFinal{
+
+    position:relative;
+
+    margin-top:25px;
+
+    padding:25px 20px;
+
+    background:
+    radial-gradient(circle at top,#ffffffcc,transparent 35%),
+    linear-gradient(180deg,#ffe0ef,#fff3f8) !important;
+
+    border:3px solid #ffb6d9;
+
+    border-radius:25px;
+
+    box-shadow:
+    0 0 25px rgba(255,105,180,.35),
+    inset 0 0 25px rgba(255,182,217,.5);
+
+    overflow:hidden;
+
+    animation:entradaInvitacion 1s ease;
+
+}
+
+
+#invitacionFinal h1{
+
+    font-family:'Pacifico',cursive;
+
+    color:#e63f82;
+
+    text-shadow:
+    0 0 10px #ffb6d9,
+    0 0 25px #ff69b4;
+
+}
+
+
+#invitacionFinal h2{
+
+    color:#ff6fa8;
+
+    font-size:1.5rem;
+
+}
+
+
+/* Decoración de esquinas */
+
+#invitacionFinal::before{
+
+    content:"✨";
+
+    position:absolute;
+
+    top:10px;
+
+    right:15px;
+
+    font-size:25px;
+
+}
+
+
+#invitacionFinal::after{
+
+    content:"🌸";
+
+    position:absolute;
+
+    bottom:10px;
+
+    left:15px;
+
+    font-size:30px;
+
+}
+
+
+.adornoFresa{
+
+    position:absolute;
+
+    top:10px;
+
+    left:15px;
+
+    font-size:32px;
+
+}
+
+
+.adornoFresa.derecha{
+
+    left:auto;
+
+    right:15px;
+
+}
+
+
+@keyframes entradaInvitacion{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.8) translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1) translateY(0);
+
+    }
+
+}
