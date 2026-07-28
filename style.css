@@ -1058,41 +1058,6 @@ body{
     }
 
 }
-/* =================================
-   MAGIA FLOTANTE ENCIMA DE TODO
-================================= */
-
-.flor,
-.fresaFloat,
-.mariposa,
-.estrella{
-
-    position:fixed !important;
-
-    z-index:300 !important;
-
-    pointer-events:none;
-
-}
 
 
-/* La invitación queda un poco abajo de la magia */
 
-#libro,
-#invitacionFinal{
-
-    z-index:100 !important;
-
-}
-
-
-/* Pero el texto sigue limpio */
-
-#libro *,
-#invitacionFinal *{
-
-    position:relative;
-
-    z-index:110;
-
-}
