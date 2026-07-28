@@ -772,3 +772,74 @@ background:radial-gradient(circle at top,#ffffffaa,transparent 35%),
     }
 
 }
+
+/* =========================
+   RESPLANDOR MÁGICO DEL SOBRE
+========================= */
+
+.sobre{
+    filter:
+    drop-shadow(0 0 15px #ffb6d9)
+    drop-shadow(0 0 35px #ff69b4);
+    animation:
+    flotar 3s ease-in-out infinite,
+    brilloSobre 2.5s infinite alternate;
+}
+
+
+@keyframes brilloSobre{
+
+    from{
+        filter:
+        drop-shadow(0 0 10px #ffc1dc)
+        drop-shadow(0 0 20px #ff69b4);
+    }
+
+    to{
+        filter:
+        drop-shadow(0 0 25px #fff)
+        drop-shadow(0 0 50px #ff69b4);
+    }
+
+}
+
+
+/* =========================
+   BRILLO DE NOMBRES
+========================= */
+
+#loader h1,
+.pagina h1,
+#invitacionFinal h1{
+
+    text-shadow:
+    0 0 8px #ffb6d9,
+    0 0 18px #ff69b4,
+    0 0 35px #ffb6d9;
+
+    animation:
+    brilloNombre 2.5s infinite alternate;
+
+}
+
+
+@keyframes brilloNombre{
+
+    from{
+
+        text-shadow:
+        0 0 5px #ffc1dc,
+        0 0 15px #ff69b4;
+
+    }
+
+    to{
+
+        text-shadow:
+        0 0 15px #ff69b4,
+        0 0 35px #ffb6d9,
+        0 0 50px #ff69b4;
+
+    }
+
+}
