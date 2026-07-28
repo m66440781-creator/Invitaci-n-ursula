@@ -8,6 +8,7 @@ const contenido = document.getElementById("contenido");
 const sobre = document.getElementById("sobre");
 const libro = document.getElementById("libro");
 const historia = document.getElementById("historia");
+const continuar = document.getElementById("continuar");
 
 const texto = "Había una vez una pequeña llamada Úrsula Nazareth... que estaba a punto de cumplir 4 añitos. Y quiere compartir este día tan especial contigo. 🍓✨";
 
@@ -167,6 +168,18 @@ function crearEstrellas(cantidad){
         document.body.appendChild(estrella);
 
     }
+    
+    continuar.addEventListener("click", () => {
+
+    continuar.innerHTML = "🍓 Abriendo sorpresa...";
+
+    setTimeout(() => {
+
+        alert("Aquí aparecerá la invitación de Úrsula");
+
+    },1000);
+
+});
 }
     
     
