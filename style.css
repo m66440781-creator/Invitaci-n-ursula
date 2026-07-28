@@ -1119,3 +1119,7 @@ background:radial-gradient(circle at top,#ffffffaa,transparent 35%),
 .sello{
     z-index:10;
 }
+/* Ajuste punta tapa del sobre */
+.tapa{
+    clip-path:polygon(0 0,50% 100%,100% 0);
+}
