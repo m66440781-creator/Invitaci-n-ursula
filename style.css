@@ -605,3 +605,23 @@ body{
     }
 
 }
+.adornoFresa{
+
+    position:absolute;
+
+    top:10px;
+
+    left:15px;
+
+    font-size:35px;
+
+}
+
+
+.adornoFresa.derecha{
+
+    left:auto;
+
+    right:15px;
+
+}
