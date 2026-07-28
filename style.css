@@ -534,3 +534,17 @@ transform:scale(1.5);
     opacity:1 !important;
     visibility:visible !important;
 }
+.sobre{
+    z-index:100;
+}
+.fondo{
+    z-index:1;
+}
+
+.flores{
+    z-index:2;
+}
+
+.sobre{
+    z-index:3;
+}
