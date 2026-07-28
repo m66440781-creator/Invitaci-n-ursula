@@ -781,8 +781,7 @@ background:radial-gradient(circle at top,#ffffffaa,transparent 35%),
     filter:
     drop-shadow(0 0 15px #ffb6d9)
     drop-shadow(0 0 35px #ff69b4);
-    animation:
-    brilloSobre 2.5s infinite alternate;
+
 }
 
 
@@ -1026,4 +1025,25 @@ background:radial-gradient(circle at top,#ffffffaa,transparent 35%),
 
 .sobre.abierto .tapa{
     transform:rotateX(180deg);
+}
+.sobre::before{
+    content:"";
+    position:absolute;
+    inset:-20px;
+    border-radius:30px;
+    filter:
+    drop-shadow(0 0 20px #ff69b4);
+    animation:resplandorSobre 2.5s infinite alternate;
+    z-index:-1;
+}
+
+@keyframes resplandorSobre{
+    from{
+        opacity:.4;
+        transform:scale(.9);
+    }
+    to{
+        opacity:1;
+        transform:scale(1.15);
+    }
 }
