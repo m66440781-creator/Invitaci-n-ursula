@@ -1444,3 +1444,23 @@ body{
     width:100% !important;
     max-width:100% !important;
 }
+/* Ajuste página Había una vez */
+
+#libro .pagina{
+
+    width:340px !important;
+    max-width:92% !important;
+
+    padding:30px !important;
+
+    box-sizing:border-box;
+
+}
+
+
+#libro{
+
+    width:340px !important;
+    max-width:92% !important;
+
+}
