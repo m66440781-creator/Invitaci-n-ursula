@@ -171,3 +171,4 @@ function crearEstrellas(cantidad){
     }
 
           }
+console.log(document.querySelector(".sobre"));
