@@ -1331,3 +1331,34 @@ body{
     }
 
 }
+/* =================================
+   AJUSTE INVITACIÓN FINAL
+================================= */
+
+#invitacionFinal{
+
+    width:100%;
+
+    margin:0;
+
+    padding:25px;
+
+    background:
+    linear-gradient(180deg,#ffe0ef,#fff5fa) !important;
+
+    border-radius:25px;
+
+}
+
+
+/* Quitar apariencia de tarjeta dentro de otra */
+
+#libro{
+
+    padding:0;
+
+    background:transparent !important;
+
+    box-shadow:none !important;
+
+}
