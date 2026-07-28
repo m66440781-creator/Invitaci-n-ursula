@@ -782,7 +782,6 @@ background:radial-gradient(circle at top,#ffffffaa,transparent 35%),
     drop-shadow(0 0 15px #ffb6d9)
     drop-shadow(0 0 35px #ff69b4);
     animation:
-    flotar 3s ease-in-out infinite,
     brilloSobre 2.5s infinite alternate;
 }
 
@@ -973,7 +972,7 @@ background:radial-gradient(circle at top,#ffffffaa,transparent 35%),
 }
 
 .sobre.abierto{
-    transform:translate(-50%,-80%) scale(.8);
+    transform:translate(-50%,-120%) scale(.7);
     opacity:0;
     pointer-events:none;
 }
