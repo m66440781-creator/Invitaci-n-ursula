@@ -851,3 +851,34 @@ body{
     }
 
 }
+/* ✨ Entrada mágica del título del cuento */
+
+.pagina h1{
+
+    animation:
+    aparecerTitulo 1.5s ease,
+    brilloTexto 2s infinite alternate;
+
+}
+
+
+@keyframes aparecerTitulo{
+
+    0%{
+
+        opacity:0;
+
+        transform:translateY(-20px) scale(.8);
+
+    }
+
+
+    100%{
+
+        opacity:1;
+
+        transform:translateY(0) scale(1);
+
+    }
+
+}
