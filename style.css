@@ -469,6 +469,7 @@ body{
     transition:1s;
 
     z-index:50;
+}
 
 }
 #invitacionFinal.mostrar{
@@ -508,5 +509,66 @@ body{
     border-radius:15px;
 
     font-style:italic;
+
+}
+
+}
+/* =========================
+   MAGIA INVITACIÓN FINAL
+========================= */
+
+#invitacionFinal.mostrar{
+
+    animation:entradaMagica 1.2s ease forwards;
+
+}
+
+
+#invitacionFinal h1{
+
+    animation:brilloNombre 2.5s infinite alternate;
+
+}
+
+
+@keyframes entradaMagica{
+
+    0%{
+
+        opacity:0;
+
+        transform:translate(-50%,-50%) scale(.5) rotate(-5deg);
+
+        filter:blur(8px);
+
+    }
+
+
+    100%{
+
+        opacity:1;
+
+        transform:translate(-50%,-50%) scale(.95) rotate(0deg);
+
+        filter:blur(0);
+
+    }
+
+}
+
+
+@keyframes brilloNombre{
+
+    from{
+
+        text-shadow:0 0 5px #ffb6d9;
+
+    }
+
+    to{
+
+        text-shadow:0 0 20px #ff69b4;
+
+    }
 
 }
