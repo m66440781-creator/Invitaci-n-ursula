@@ -326,3 +326,196 @@ transform:translate(-50%,-50%) scale(1);
 }
 
 }
+/*==================================
+      JARDÍN MÁGICO
+==================================*/
+
+.flor{
+    position:absolute;
+    font-size:26px;
+    animation:caerFlor linear infinite;
+    pointer-events:none;
+    user-select:none;
+}
+
+.mariposa{
+    position:absolute;
+    font-size:28px;
+    animation:volar 10s linear infinite;
+    pointer-events:none;
+    user-select:none;
+}
+
+.fresaFloat{
+    position:absolute;
+    font-size:24px;
+    animation:fresaCae linear infinite;
+    pointer-events:none;
+    user-select:none;
+}
+
+.estrella{
+    position:absolute;
+    width:5px;
+    height:5px;
+    background:#fff;
+    border-radius:50%;
+    box-shadow:0 0 12px #fff;
+    animation:brillar 2.5s infinite alternate;
+}
+
+/*======================
+      BOTONES
+======================*/
+
+button{
+
+font-family:'Nunito',sans-serif;
+
+}
+
+#continuar{
+
+box-shadow:0 10px 25px rgba(255,105,180,.35);
+
+}
+
+#continuar:active{
+
+transform:scale(.97);
+
+}
+
+/*======================
+      RESPONSIVE
+======================*/
+
+@media(max-width:480px){
+
+#loader h1{
+
+font-size:2.3rem;
+
+}
+
+.sobre{
+
+width:290px;
+
+height:200px;
+
+}
+
+#libro{
+
+padding:22px;
+
+}
+
+.pagina h1{
+
+font-size:1.8rem;
+
+}
+
+}
+
+/*======================
+     ANIMACIONES
+======================*/
+
+@keyframes caerFlor{
+
+0%{
+
+transform:translateY(-120px) rotate(0deg);
+
+opacity:0;
+
+}
+
+10%{
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translateY(120vh) rotate(360deg);
+
+opacity:.9;
+
+}
+
+}
+
+@keyframes fresaCae{
+
+0%{
+
+transform:translateY(-120px);
+
+}
+
+100%{
+
+transform:translateY(120vh);
+
+}
+
+}
+
+@keyframes volar{
+
+0%{
+
+transform:translate(-10vw,70vh);
+
+}
+
+25%{
+
+transform:translate(20vw,40vh);
+
+}
+
+50%{
+
+transform:translate(50vw,55vh);
+
+}
+
+75%{
+
+transform:translate(80vw,25vh);
+
+}
+
+100%{
+
+transform:translate(110vw,60vh);
+
+}
+
+}
+
+@keyframes brillar{
+
+from{
+
+opacity:.2;
+
+transform:scale(.6);
+
+}
+
+to{
+
+opacity:1;
+
+transform:scale(1.5);
+
+}
+
+}
