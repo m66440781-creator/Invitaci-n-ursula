@@ -471,34 +471,20 @@ body{
     z-index:50;
 
 }
-    
 
+@media(max-width:480px){
 
-#invitacionFinal h1{
+    #invitacionFinal h1{
+        font-size:1.8rem;
+    }
 
-    font-family:'Pacifico',cursive;
+    #invitacionFinal h2{
+        font-size:1.3rem;
+    }
 
-    color:#e63f82;
-
-    margin-bottom:15px;
-
-
-#invitacionFinal h2{
-
-    color:#ff6fa8;
-
-    margin-bottom:20px;
-
-}
-
-
-#invitacionFinal p{
-
-    color:#6f5a61;
-
-    line-height:1.6;
-
-    margin:12px 0;
+    #invitacionFinal p{
+        font-size:.95rem;
+    }
 
 }
 
