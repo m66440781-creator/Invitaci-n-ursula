@@ -1421,3 +1421,26 @@ body{
     box-sizing:border-box;
 
 }
+/* RESTAURAR ESCALA */
+
+#libro{
+    transform:translate(-50%,-50%) scale(.7) !important;
+    width:340px !important;
+    max-width:92% !important;
+    padding:30px !important;
+}
+
+#libro.mostrar{
+    transform:translate(-50%,-50%) scale(1) !important;
+}
+
+#libro .pagina{
+    width:100% !important;
+    box-sizing:border-box;
+}
+
+#invitacionFinal{
+    transform:none !important;
+    width:100% !important;
+    max-width:100% !important;
+}
