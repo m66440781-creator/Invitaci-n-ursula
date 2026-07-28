@@ -253,7 +253,7 @@ body{
     opacity:1;
     visibility:visible;
     transform:translate(-50%,-50%) scale(1);
-    z-index:100    
+    z-index:100;    
 }
 
 .pagina h1{
@@ -515,7 +515,7 @@ background:radial-gradient(circle at top,#ffffffaa,transparent 35%),
 
     transform:translate(-50%,-50%) scale(.95);
         
-    z-index:200
+    z-index:200;
 
 }
 
@@ -550,7 +550,6 @@ background:radial-gradient(circle at top,#ffffffaa,transparent 35%),
 
 }
 
-}
 /* =========================
    MAGIA INVITACIÓN FINAL
 ========================= */
