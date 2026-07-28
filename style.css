@@ -609,3 +609,24 @@ transform:scale(1.5);
     background:#ff78b2;
     display:block;
 }
+.sobre{
+    position:fixed !important;
+    left:50% !important;
+    top:50% !important;
+    transform:translate(-50%,-50%) !important;
+    width:320px !important;
+    height:220px !important;
+    background:red !important;
+    z-index:999999 !important;
+    display:block !important;
+    opacity:1 !important;
+    visibility:visible !important;
+}
+
+.carta{
+    display:none;
+}
+
+.tapa{
+    display:none;
+}
