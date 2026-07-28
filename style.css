@@ -1123,3 +1123,14 @@ background:radial-gradient(circle at top,#ffffffaa,transparent 35%),
 .tapa{
     clip-path:polygon(0 0,50% 100%,100% 0);
 }
+/* Sello encima de la tapa */
+.sello{
+    z-index:20;
+    transform:translate(-50%,-50%) translateZ(40px);
+}.carta{
+    transform-style:preserve-3d;
+}
+
+.sello{
+    position:absolute;
+}
