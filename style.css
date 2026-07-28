@@ -974,3 +974,14 @@ body{
     }
 
 }
+#libro,
+#invitacionFinal{
+
+    background:#ffd6e8 !important;
+
+    border:2px solid #ff9fc8 !important;
+
+    box-shadow:
+    0 0 30px rgba(255,105,180,.5) !important;
+
+}
