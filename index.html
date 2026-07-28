@@ -1,181 +1,69 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Invitación - Úrsula</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg: #f8f6f2;
-      --card-bg: rgba(255,255,255,0.95);
-      --accent: #c84b6b;
-      --muted: #6b6b6b;
-      --max-width: 920px;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%;margin:0;font-family:Montserrat, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;}
-    body{
-      background: #fff url("img/fondo.jpg") center/cover no-repeat fixed;
-      color:#222;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:32px;
-    }
-    .page{width:100%;max-width:var(--max-width);} 
-    .cover{
-      position:relative;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      gap:1rem;
-      text-align:center;
-    }
-    .portada{
-      width:100%;
-      max-width:720px;
-      border-radius:12px;
-      box-shadow:0 8px 30px rgba(0,0,0,0.2);
-      display:block;
-    }
-    .btn{
-      font-family:inherit;
-      padding:12px 20px;
-      border-radius:8px;
-      border:0;
-      cursor:pointer;
-      transition:transform .12s ease, box-shadow .12s;
-    }
-    .btn:active{transform:translateY(1px)}
-    .btn.primary{background:var(--accent); color:white; box-shadow:0 6px 18px rgba(200,75,107,0.25)}
-    .btn.secondary{background:transparent; border:1px solid rgba(0,0,0,0.08); color:var(--muted)}
-    .invitation{
-      position:fixed;
-      inset:0;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      background:linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.45));
-      padding:24px;
-      z-index:60;
-    }
-    .hidden{display:none}
-    .card{
-      width:100%;
-      max-width:760px;
-      background:var(--card-bg);
-      border-radius:14px;
-      padding:28px;
-      box-shadow:0 20px 60px rgba(0,0,0,0.35);
-      text-align:center;
-      position:relative;
-      overflow:hidden;
-    }
-    .card h1{
-      font-family: "Playfair Display", serif;
-      margin:6px 0 8px;
-      font-size:2.2rem;
-      color:#2b2b2b;
-    }
-    .lead{color:var(--muted); margin:0 0 18px}
-    .sello{position:absolute; top:18px; right:18px; width:84px; opacity:.95}
-    .decor{display:flex; gap:12px; justify-content:center; align-items:flex-end; margin:18px 0 24px; flex-wrap:wrap}
-    .decor-img{width:110px; max-width:25%; opacity:0.98}
-    .mariposas{ animation:float 6s ease-in-out infinite; transform-origin:center; }
-    @keyframes float{
-      0%{transform:translateY(0) rotate(0deg)}
-      25%{transform:translateY(-10px) rotate(-6deg)}
-      50%{transform:translateY(0) rotate(0deg)}
-      75%{transform:translateY(8px) rotate(6deg)}
-      100%{transform:translateY(0) rotate(0deg)}
-    }
-    .actions{display:flex; gap:12px; justify-content:center; flex-wrap:wrap}
-    @media (max-width:640px){
-      .card{padding:18px}
-      .decor-img{width:76px}
-      .portada{max-width:420px}
-    }
-    .visually-hidden{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap;border:0;padding:0;margin:-1px}
-  </style>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Úrsula Nazareth | 4 años</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
 </head>
+
 <body>
-  <!--
-    Guarda este archivo como: Invitacion-Ursula/index.html
-    Añade tus complementos en:
-      Invitacion-Ursula/img/   -> portada.jpg, fondo.jpg, sello.png, libro.png, flores.png, mariposas.png, fresas.png
-      Invitacion-Ursula/audio/ -> musica.mp3
-  -->
-  <main class="page">
-    <section class="cover">
-      <img src="img/portada.jpg" alt="Portada" class="portada">
-      <button id="openBtn" class="btn primary">Abrir invitación</button>
-    </section>
 
-    <section id="invitation" class="invitation hidden" aria-hidden="true">
-      <div class="card" role="dialog" aria-label="Invitación de Úrsula">
-        <img src="img/sello.png" alt="" class="sello">
-        <h1>Úrsula te invita</h1>
-        <p class="lead">
-          Será un placer compartir este día contigo. Reserva la fecha y acompáñanos.
-        </p>
+<div id="loader">
+    <div class="fresa">🍓</div>
+    <h1>Úrsula Nazareth</h1>
+    <p>Cargando una dulce sorpresa...</p>
+</div>
 
-        <div class="decor" aria-hidden="true">
-          <img src="img/flores.png" alt="" class="decor-img flores">
-          <img src="img/mariposas.png" alt="" class="decor-img mariposas">
-          <img src="img/fresas.png" alt="" class="decor-img fresas">
-          <img src="img/libro.png" alt="" class="decor-img libro">
-        </div>
+<div id="contenido">
 
-        <div class="actions">
-          <button id="rsvpBtn" class="btn primary">Confirmar asistencia</button>
-          <button id="closeBtn" class="btn secondary">Cerrar</button>
-        </div>
-      </div>
-    </section>
-  </main>
+<div class="fondo"></div>
 
-  <audio id="music" src="audio/musica.mp3" preload="auto"></audio>
+<div class="flores"></div>
 
-  <script>
-    // Interacciones básicas: abrir/cerrar invitación y controlar música
-    document.addEventListener("DOMContentLoaded", () => {
-      const openBtn = document.getElementById("openBtn");
-      const closeBtn = document.getElementById("closeBtn");
-      const rsvpBtn = document.getElementById("rsvpBtn");
-      const invitation = document.getElementById("invitation");
-      const music = document.getElementById("music");
+<div class="sobre" id="sobre">
 
-      function showInvitation(){
-        invitation.classList.remove("hidden");
-        invitation.setAttribute("aria-hidden", "false");
-        music.play().catch(() => {
-          // autoplay puede ser bloqueado; queda a la espera de interacción
-          console.log("Reproducción automática bloqueada, espera interacción");
-        });
-      }
+<div class="tapa"></div>
 
-      function hideInvitation(){
-        invitation.classList.add("hidden");
-        invitation.setAttribute("aria-hidden", "true");
-        music.pause();
-        music.currentTime = 0;
-      }
+<div class="carta">
 
-      openBtn?.addEventListener("click", showInvitation);
-      closeBtn?.addEventListener("click", hideInvitation);
+<div class="sello">
+🍓
+</div>
 
-      rsvpBtn?.addEventListener("click", () => {
-        // ejemplo simple: alerta. Aquí puedes agregar envío a servidor o guardar localmente.
-        alert("¡Gracias! Tu asistencia ha sido registrada (ejemplo).");
-        music.play().catch(()=>{});
-      });
+<h2>Tócame</h2>
 
-      // cerrar con Escape
-      document.addEventListener("keydown", (e) => {
-        if(e.key === "Escape" && !invitation.classList.contains("hidden")) hideInvitation();
-      });
-    });
-  </script>
+</div>
+
+</div>
+
+<div id="libro">
+
+<div class="pagina">
+
+<h1>Había una vez...</h1>
+
+<p id="historia"></p>
+
+<button id="continuar">
+Abrir Invitación
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
 </body>
 </html>
