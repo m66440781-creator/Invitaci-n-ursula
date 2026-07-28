@@ -1063,3 +1063,12 @@ background:radial-gradient(circle at top,#ffffffaa,transparent 35%),
     opacity:0;
     pointer-events:none;
 }
+/* PRUEBA CENTRADO DEFINITIVO */
+
+#sobre{
+    position:absolute !important;
+    left:50% !important;
+    top:50% !important;
+    margin:0 !important;
+    transform:translate(-50%,-50%) !important;
+}
