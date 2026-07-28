@@ -58,10 +58,6 @@ body{
     height:100vh;
     position:relative;
     overflow:hidden;
-    display:none;
-}
-
-#contenido.mostrar{
     display:block;
 }
 
