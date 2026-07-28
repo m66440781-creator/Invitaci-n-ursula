@@ -548,3 +548,17 @@ transform:scale(1.5);
 .sobre{
     z-index:3;
 }
+.fondo{
+    z-index:0;
+}
+
+.flores{
+    z-index:1;
+}
+
+.sobre{
+    z-index:10;
+    display:block;
+    visibility:visible;
+    opacity:1;
+}
