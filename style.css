@@ -1111,7 +1111,7 @@ background:radial-gradient(circle at top,#ffffffaa,transparent 35%),
 .tapa{
     width:100%;
     height:100%;
-    clip-path:polygon(0 0,50% 45%,100% 0);
+    clip-path:polygon(0 0,50% 70%,100% 0);
     transform-origin:top;
     z-index:3;
 }
