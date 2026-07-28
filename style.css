@@ -17,15 +17,9 @@ body{
 /* Loader */
 
 #loader{
-    position:fixed;
-    inset:0;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    background:linear-gradient(180deg,#ffd1e6,#fff0f7);
-    z-index:9999;
-    transition:1s;
+    display:none !important;
+}
+
 }
 
 #loader.oculto{
