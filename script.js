@@ -167,9 +167,15 @@ function crearEstrellas(cantidad){
 
         document.body.appendChild(estrella);
 
+
     }
-    
-    continuar.addEventListener("click", () => {
+
+}
+
+
+// BOTÓN ABRIR INVITACIÓN
+
+continuar.addEventListener("click", () => {
 
     continuar.innerHTML = "🍓 Abriendo sorpresa...";
 
@@ -180,6 +186,4 @@ function crearEstrellas(cantidad){
     },1000);
 
 });
-}
-    
     
