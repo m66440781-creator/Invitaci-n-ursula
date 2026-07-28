@@ -435,13 +435,12 @@ body{
     flex-direction:column;
 
     justify-content:flex-start;
-padding-top:35px;
 
     align-items:center;
 
     text-align:center;
 
-    padding:30px;
+    padding:35px 30px 30px
 
     background:
     radial-gradient(circle at top,#ffffffcc,transparent 35%),
