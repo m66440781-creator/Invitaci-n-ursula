@@ -515,3 +515,12 @@ transform:scale(1.5);
 }
 
 }
+#contenido{
+    background:red !important;
+    display:block !important;
+    z-index:9999;
+}
+
+#contenido *{
+    color:black !important;
+}
