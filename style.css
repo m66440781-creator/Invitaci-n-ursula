@@ -850,8 +850,7 @@ background:radial-gradient(circle at top,#ffffffaa,transparent 35%),
     transform-style:preserve-3d;
     filter:
     drop-shadow(0 25px 35px rgba(214,63,122,.35));
-    animation:
-    brilloSobre 2.5s infinite alternate;
+
 }
 
 /* profundidad del cuerpo */
