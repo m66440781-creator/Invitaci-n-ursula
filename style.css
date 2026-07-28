@@ -624,7 +624,11 @@ body{
 
     right:15px;
 
-    top:5px;
+    top:8px;
+
+    z-index:1;
+
+}
 
 }
 
