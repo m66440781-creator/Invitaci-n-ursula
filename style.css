@@ -444,12 +444,16 @@ body{
     position:absolute;
     left:50%;
     top:50%;
-    transform:translate(-50%,-50%) scale(.7);
 
-    width:340px;
-    max-width:90%;
+    transform:translate(-50%,-50%) scale(.85);
 
-    padding:30px;
+    width:90%;
+    max-width:340px;
+    max-height:85vh;
+
+    overflow-y:auto;
+
+    padding:22px;
 
     background:#fffdf8;
 
@@ -465,17 +469,9 @@ body{
     transition:1s;
 
     z-index:50;
-}
-
-
-#invitacionFinal.mostrar{
-
-    opacity:1;
-    visibility:visible;
-
-    transform:translate(-50%,-50%) scale(1);
 
 }
+    
 
 
 #invitacionFinal h1{
@@ -485,8 +481,6 @@ body{
     color:#e63f82;
 
     margin-bottom:15px;
-
-}
 
 
 #invitacionFinal h2{
