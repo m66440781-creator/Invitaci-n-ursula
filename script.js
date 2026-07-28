@@ -167,5 +167,6 @@ function crearEstrellas(cantidad){
         document.body.appendChild(estrella);
 
     }
-
+}
+    
     
