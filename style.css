@@ -855,7 +855,7 @@ background:radial-gradient(circle at top,#ffffffaa,transparent 35%),
 ========================== */
 
 .sobre{
-    transform-style:flat;
+    transform-style:preserve-3d;
     filter:
     drop-shadow(0 25px 35px rgba(214,63,122,.35));
 
