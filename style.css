@@ -111,7 +111,7 @@ body{
 .sobre{
     position:absolute;
     left:50%;
-    top:52%;
+    top:50%;
     transform:translate(-50%,-50%);
     width:320px;
     height:220px;
@@ -119,10 +119,13 @@ body{
     perspective:1200px;
     transition:.8s;
     z-index:5;
+    filter:
+    drop-shadow(0 0 10px #ffb6d9)
+    drop-shadow(0 0 25px #ff69b4);
 }
 
 .sobre:hover{
-    transform:translate(-50%,-52%) scale(1.03);
+    transform:translate(-50%,-50%) scale(1.03);
 }
 
 .carta{
