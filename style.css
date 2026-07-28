@@ -659,3 +659,49 @@ body{
     position:relative;
     z-index:10;
 }
+/* ✨ Resplandor mágico del sobre y carta */
+
+.sobre{
+    filter:drop-shadow(0 0 15px rgba(255,105,180,.45));
+    animation:brilloSobre 3s infinite alternate;
+}
+
+
+.carta{
+    box-shadow:
+    0 0 15px rgba(255,105,180,.35),
+    0 20px 45px rgba(0,0,0,.25);
+}
+
+
+.sello{
+    animation:
+    latido 2s infinite,
+    brilloSello 2.5s infinite alternate;
+}
+
+
+@keyframes brilloSobre{
+
+    from{
+        filter:drop-shadow(0 0 8px rgba(255,105,180,.3));
+    }
+
+    to{
+        filter:drop-shadow(0 0 25px rgba(255,105,180,.8));
+    }
+
+}
+
+
+@keyframes brilloSello{
+
+    from{
+        box-shadow:0 0 15px rgba(255,105,180,.4);
+    }
+
+    to{
+        box-shadow:0 0 35px rgba(255,105,180,.9);
+    }
+
+}
