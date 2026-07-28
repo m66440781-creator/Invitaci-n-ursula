@@ -1,7 +1,7 @@
-/*==================================
-        INVITACIÓN ÚRSULA
-        ROSITA FRESITA
-==================================*/
+/* ==========================
+   INVITACIÓN ÚRSULA NAZARETH
+   ROSITA FRESITA
+========================== */
 
 *{
     margin:0;
@@ -9,28 +9,24 @@
     box-sizing:border-box;
 }
 
-html{
-    scroll-behavior:smooth;
-}
-
 body{
-    font-family:'Nunito',sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
     overflow:hidden;
-    background:#ffd8e6;
+    background:linear-gradient(180deg,#ffd4e7,#fff6fb);
 }
 
-/*=========================
-        LOADER
-=========================*/
+/* ==========================
+          LOADER
+========================== */
 
 #loader{
     position:fixed;
     inset:0;
+    background:linear-gradient(180deg,#ffbfd8,#fff4f9);
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
-    background:linear-gradient(180deg,#ffd4ea,#fff3f8);
     z-index:9999;
     transition:1s;
 }
@@ -40,309 +36,82 @@ body{
     visibility:hidden;
 }
 
+#loader .fresa{
+    font-size:90px;
+    animation:flotar 2s ease-in-out infinite;
+    position:relative;
+}
+
+#loader .fresa::before{
+    content:"";
+    position:absolute;
+    left:50%;
+    top:50%;
+    width:90px;
+    height:90px;
+    transform:translate(-50%,-50%);
+    background:#ff69b4;
+    border-radius:50%;
+    filter:blur(25px);
+    opacity:.7;
+    z-index:-1;
+}
+
 #loader h1{
+    margin-top:20px;
     font-family:'Pacifico',cursive;
     color:#e63f82;
     font-size:3rem;
-    margin-top:20px;
+    text-shadow:
+    0 0 10px #ffb6d9,
+    0 0 25px #ff69b4,
+    0 0 45px #ffd6e8;
 }
 
 #loader p{
-    margin-top:10px;
-    color:#87556a;
+    margin-top:15px;
+    color:#7b5b66;
     font-size:1.1rem;
 }
 
-.fresa{
-    font-size:70px;
-    animation:flotar 2s ease-in-out infinite;
-}
-
-/*=========================
-        CONTENIDO
-=========================*/
+/* ==========================
+       CONTENIDO
+========================== */
 
 #contenido{
     position:relative;
     width:100%;
     height:100vh;
     overflow:hidden;
-    display:block;
 }
 
-/*=========================
-          FONDO
-=========================*/
+/* ==========================
+      FONDO MÁGICO
+========================== */
 
 .fondo{
     position:absolute;
     inset:0;
-    background:linear-gradient(#ffd4ea,#fff2f8);
-    z-index:0;
+    background:
+    radial-gradient(circle at 20% 20%,rgba(255,255,255,.8),transparent 25%),
+    radial-gradient(circle at 80% 30%,rgba(255,182,217,.7),transparent 25%),
+    linear-gradient(180deg,#ffd3e8,#fff4fa);
 }
 
 .fondo::before{
     content:"";
     position:absolute;
-    inset:-100%;
+    inset:-50%;
     background:
-    radial-gradient(circle,#ffffffaa 1px,transparent 2px);
-    background-size:60px 60px;
-    animation:brillos 20s linear infinite;
-    opacity:.6;
+    radial-gradient(circle,#fff 2px,transparent 3px);
+    background-size:80px 80px;
+    opacity:.35;
+    animation:subirBrillos 25s linear infinite;
 }
 
-/*=========================
-         FLORES
-=========================*/
-
-.flores{
-    position:absolute;
-    inset:0;
-    overflow:hidden;
-    pointer-events:none;
-    z-index:1;
-}
-
-/*=========================
-          SOBRE
-=========================*/
-
-.sobre{
-    position:absolute;
-    left:50%;
-    top:52%;
-    transform:translate(-50%,-50%);
-    width:320px;
-    height:220px;
-    cursor:pointer;
-    perspective:1200px;
-    transition:.8s;
-    z-index:5;
-}
-
-.sobre:hover{
-    transform:translate(-50%,-52%) scale(1.03);
-}
-
-.carta{
-    position:absolute;
-    width:100%;
-    height:100%;
-    background:#ffeaf3;
-    border-radius:14px;
-    box-shadow:0 18px 45px rgba(0,0,0,.25);
-    overflow:hidden;
-}
-
-.carta::before{
-    content:"";
-    position:absolute;
-    inset:0;
-    clip-path:polygon(0 100%,50% 45%,100% 100%);
-    background:#ff92bf;
-    z-index:2;
-}
-
-.carta::after{
-    content:"";
-    position:absolute;
-    inset:0;
-    border:8px solid #ffacd0;
-    border-radius:14px;
-    pointer-events:none;
-}
-
-.tapa{
-    position:absolute;
-    width:100%;
-    height:100%;
-    background:#ff79b3;
-    clip-path:polygon(0 0,50% 55%,100% 0);
-    transform-origin:top;
-    transition:1s;
-    z-index:5;
-}
-
-.sello{
-    position:absolute;
-    left:50%;
-    top:55%;
-    transform:translate(-50%,-50%);
-    width:90px;
-    height:90px;
-    border-radius:50%;
-    background:#fff;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size:42px;
-    box-shadow:0 0 25px rgba(255,105,180,.4);
-    animation:latido 2s infinite;
-    z-index:6;
-}
-
-.carta h2{
-    position:absolute;
-    bottom:20px;
-    width:100%;
-    text-align:center;
-    font-family:'Pacifico',cursive;
-    color:#d64079;
-    font-size:28px;
-    z-index:7;
-}
-
-.sobre.abierto .tapa{
-    transform:rotateX(180deg);
-}
-
-.sobre.abierto{
-    transform:translate(-50%,-65%);
-}
-/*=========================
-           LIBRO
-=========================*/
-
-#libro{
-    position:absolute;
-    left:50%;
-    top:55%;
-    transform:translate(-50%,-50%) scale(.7);
-    width:340px;
-    max-width:92%;
-    #libro{
-
-    background:
-    radial-gradient(circle at top,#ffffffaa,transparent 40%),
-    linear-gradient(180deg,#ffe1ef,#fff0f7);
-
-    border:2px solid #ffc1dc;
-
-    box-shadow:
-    0 20px 60px rgba(255,105,180,.25),
-    0 0 25px rgba(255,105,180,.35);
-
-}
-    border-radius:18px;
-    padding:30px;
-    box-shadow:0 20px 60px rgba(0,0,0,.25);
-    opacity:0;
-    visibility:hidden;
-    transition:1s;
-    z-index:20;
-}
-
-#libro.mostrar{
-    opacity:1;
-    visibility:visible;
-    transform:translate(-50%,-50%) scale(1);
-}
-
-.pagina h1{
-    font-family:'Pacifico',cursive;
-    color:#d83d7a;
-    text-align:center;
-    margin-bottom:20px;
-}
-
-.pagina p{
-    line-height:1.7;
-    color:#6f5a61;
-    min-height:130px;
-}
-
-/*=========================
-          BOTÓN
-=========================*/
-
-#continuar{
-    margin-top:25px;
-    width:100%;
-    border:none;
-    border-radius:40px;
-    padding:15px;
-    background:#ff6fa8;
-    color:#fff;
-    font-size:18px;
-    font-weight:bold;
-    cursor:pointer;
-    transition:.3s;
-    box-shadow:0 10px 25px rgba(255,105,180,.35);
-}
-
-#continuar:hover{
-    background:#e84c8d;
-}
-
-#continuar:active{
-    transform:scale(.97);
-}
-
-/*=========================
-     ELEMENTOS MÁGICOS
-=========================*/
-
-.flor{
-    position:absolute;
-    font-size:26px;
-    animation:caerFlor linear infinite;
-    pointer-events:none;
-}
-
-.fresaFloat{
-    position:absolute;
-    font-size:24px;
-    animation:fresaCae linear infinite;
-    pointer-events:none;
-}
-
-.mariposa{
-    position:absolute;
-    font-size:28px;
-    animation:volar 10s linear infinite;
-    pointer-events:none;
-}
-
-.estrella{
-    position:absolute;
-    width:5px;
-    height:5px;
-    border-radius:50%;
-    background:#fff;
-    box-shadow:0 0 12px #fff;
-    animation:brillar 2.5s infinite alternate;
-}
-
-/*=========================
-       RESPONSIVE
-=========================*/
-
-@media(max-width:480px){
-
-    #loader h1{
-        font-size:2.3rem;
-    }
-
-    .sobre{
-        width:290px;
-        height:200px;
-    }
-
-    #libro{
-        width:92%;
-        padding:22px;
-    }
-
-    .pagina h1{
-        font-size:1.8rem;
-    }
-
-}
-
-/*=========================
+/* ==========================
         ANIMACIONES
-=========================*/
+========================== */
 
 @keyframes flotar{
 
@@ -356,29 +125,234 @@ body{
 
 }
 
-@keyframes brillos{
+@keyframes subirBrillos{
 
-    0%{
+    from{
         transform:translateY(0);
     }
 
-    100%{
-        transform:translateY(-300px);
+    to{
+        transform:translateY(-200px);
     }
 
+}
+
+/* ==========================
+          SOBRE
+========================== */
+
+.sobre{
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    width:320px;
+    height:220px;
+    cursor:pointer;
+    z-index:10;
+    transition:.8s;
+    animation:flotar 3s ease-in-out infinite;
+    filter:drop-shadow(0 0 20px rgba(255,105,180,.5));
+}
+
+.tapa{
+    position:absolute;
+    width:100%;
+    height:110px;
+    background:#ff7eb5;
+    clip-path:polygon(0 0,100% 0,50% 100%);
+    transform-origin:top;
+    transition:1s;
+    z-index:3;
+}
+
+.carta{
+    position:absolute;
+    left:50%;
+    bottom:0;
+    transform:translateX(-50%);
+    width:92%;
+    height:185px;
+    background:linear-gradient(180deg,#fffdfd,#ffeef7);
+    border-radius:18px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    box-shadow:0 15px 40px rgba(0,0,0,.25);
+    transition:1s;
+}
+
+.sello{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    background:#ff5c99;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:34px;
+    margin-bottom:12px;
+    box-shadow:0 0 25px rgba(255,105,180,.8);
+    animation:latido 2s infinite;
+}
+
+.carta h2{
+    color:#d83d7a;
+    font-family:'Pacifico',cursive;
+}
+
+.sobre.abierto .tapa{
+    transform:rotateX(180deg);
+}
+
+.sobre.abierto .carta{
+    transform:translateX(-50%) translateY(-90px);
+}
+
+/* ==========================
+            LIBRO
+========================== */
+
+#libro{
+    position:absolute;
+    left:50%;
+    top:52%;
+    transform:translate(-50%,-50%) scale(.8);
+
+    width:340px;
+    max-width:92%;
+
+    opacity:0;
+    visibility:hidden;
+
+    transition:1s;
+    z-index:30;
+}
+
+#libro.mostrar{
+    opacity:1;
+    visibility:visible;
+    transform:translate(-50%,-50%) scale(1);
+}
+
+.pagina{
+    position:relative;
+
+    background:
+    linear-gradient(180deg,#fff8fc,#ffe8f3);
+
+    border-radius:25px;
+
+    padding:28px;
+
+    border:3px solid #ffc3dd;
+
+    box-shadow:
+    0 20px 50px rgba(255,105,180,.25),
+    inset 0 0 25px rgba(255,255,255,.6);
+}
+
+.pagina h1{
+    text-align:center;
+    color:#d83d7a;
+    font-family:'Pacifico',cursive;
+    margin-bottom:18px;
+    text-shadow:
+        0 0 10px #ffb6d9,
+        0 0 20px #ff69b4;
+}
+
+.pagina p{
+    color:#6f5a61;
+    line-height:1.7;
+    min-height:130px;
+}
+
+/* ==========================
+           BOTÓN
+========================== */
+
+#continuar{
+    width:100%;
+    margin-top:20px;
+    padding:15px;
+    border:none;
+    border-radius:40px;
+    background:#ff6fa8;
+    color:#fff;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+#continuar:hover{
+    background:#e84c8d;
 }
 
 @keyframes latido{
 
     0%,100%{
-        transform:translate(-50%,-50%) scale(1);
+        transform:scale(1);
     }
 
     50%{
-        transform:translate(-50%,-50%) scale(1.08);
+        transform:scale(1.08);
     }
 
+        }
+
+/* ==========================
+    EFECTOS MÁGICOS
+========================== */
+
+.flor,
+.fresaFloat,
+.mariposa,
+.estrella{
+    position:fixed;
+    pointer-events:none;
+    z-index:999;
 }
+
+/* Flores */
+
+.flor{
+    font-size:28px;
+    animation:caerFlor linear infinite;
+}
+
+/* Fresas */
+
+.fresaFloat{
+    font-size:26px;
+    animation:fresaCae linear infinite;
+}
+
+/* Mariposas */
+
+.mariposa{
+    font-size:30px;
+    animation:volar 12s linear infinite;
+}
+
+/* Destellos */
+
+.estrella{
+    width:5px;
+    height:5px;
+    border-radius:50%;
+    background:#fff;
+    box-shadow:
+        0 0 10px #fff,
+        0 0 20px #ffddee;
+    animation:brillar 2s infinite alternate;
+}
+
+/* ==========================
+       ANIMACIONES
+========================== */
 
 @keyframes caerFlor{
 
@@ -401,11 +375,11 @@ body{
 @keyframes fresaCae{
 
     0%{
-        transform:translateY(-120px);
+        transform:translateY(-120px) rotate(0deg);
     }
 
     100%{
-        transform:translateY(120vh);
+        transform:translateY(120vh) rotate(360deg);
     }
 
 }
@@ -413,23 +387,23 @@ body{
 @keyframes volar{
 
     0%{
-        transform:translate(-10vw,70vh);
+        transform:translate(-15vw,70vh);
     }
 
     25%{
-        transform:translate(20vw,40vh);
+        transform:translate(20vw,35vh);
     }
 
     50%{
-        transform:translate(50vw,55vh);
+        transform:translate(55vw,55vh);
     }
 
     75%{
-        transform:translate(80vw,25vh);
+        transform:translate(85vw,20vh);
     }
 
     100%{
-        transform:translate(110vw,60vh);
+        transform:translate(120vw,60vh);
     }
 
 }
@@ -437,78 +411,64 @@ body{
 @keyframes brillar{
 
     from{
-        opacity:.2;
-        transform:scale(.6);
+        opacity:.3;
+        transform:scale(.7);
     }
 
     to{
         opacity:1;
-        transform:scale(1.5);
+        transform:scale(1.6);
     }
 
-  }
-
-/*=========================
-   INVITACIÓN FINAL
-=========================*/
+        /* ==========================
+     INVITACIÓN FINAL
+========================== */
 
 #invitacionFinal{
 
     position:absolute;
-    left:50%;
-    top:50%;
 
-    transform:translate(-50%,-50%) scale(.85);
+    inset:0;
 
-    width:90%;
-    max-width:340px;
-    max-height:85vh;
+    display:flex;
 
-    overflow-y:auto;
+    flex-direction:column;
 
-    padding:22px;
+    justify-content:center;
 
-    #invitacionFinal{
-
-    background:
-    radial-gradient(circle at top,#ffffffaa,transparent 35%),
-    linear-gradient(180deg,#ffe4f1,#fff3f8);
-
-    border:2px solid #ffc1dc;
-
-    box-shadow:
-    0 20px 60px rgba(255,105,180,.25),
-    0 0 30px rgba(255,105,180,.35);
-
-}
-
-    border-radius:25px;
+    align-items:center;
 
     text-align:center;
 
-    box-shadow:0 20px 60px rgba(0,0,0,.25);
+    padding:30px;
+
+    background:
+    radial-gradient(circle at top,#ffffffcc,transparent 35%),
+    linear-gradient(180deg,#ffe3f0,#fff5fa);
+
+    border-radius:25px;
 
     opacity:0;
+
     visibility:hidden;
 
-    transition:1s;
+    transform:scale(.85);
 
-    z-index:100;
+    transition:all .8s ease;
+
+    overflow-y:auto;
 
 }
-
 
 #invitacionFinal.mostrar{
 
-
-
     opacity:1;
+
     visibility:visible;
 
-    transform:translate(-50%,-50%) scale(.95);
+    transform:scale(1);
 
 }
-
 
 #invitacionFinal h1{
 
@@ -516,10 +476,15 @@ body{
 
     color:#e63f82;
 
-    margin-bottom:15px;
+    font-size:2.2rem;
+
+    margin-bottom:10px;
+
+    text-shadow:
+        0 0 10px #ffb6d9,
+        0 0 25px #ff69b4;
 
 }
-
 
 #invitacionFinal h2{
 
@@ -529,938 +494,245 @@ body{
 
 }
 
-
 #invitacionFinal p{
 
     color:#6f5a61;
 
-    line-height:1.6;
+    line-height:1.7;
 
-    margin:12px 0;
+    margin:8px 0;
 
 }
-
 
 #invitacionFinal .mensaje{
 
     margin-top:20px;
 
-    padding:15px;
+    padding:18px;
 
-    background:#ffeaf3;
-
-    border-radius:15px;
-
-    font-style:italic;
-
-}
-@media(max-width:480px){
-
-    #invitacionFinal h1{
-        font-size:1.8rem;
-    }
-
-    #invitacionFinal h2{
-        font-size:1.3rem;
-    }
-
-    #invitacionFinal p{
-        font-size:.95rem;
-    }
-
-}
-
-/* =========================
-   MAGIA INVITACIÓN FINAL
-========================= */
-
-#invitacionFinal.mostrar{
-
-    animation:entradaMagica 1.2s ease forwards;
-
-}
-
-
-#invitacionFinal h1{
-
-    animation:brilloNombre 2.5s infinite alternate;
-
-}
-
-
-@keyframes entradaMagica{
-
-    0%{
-
-        opacity:0;
-
-        transform:translate(-50%,-50%) scale(.5) rotate(-5deg);
-
-        filter:blur(8px);
-
-    }
-
-
-    100%{
-
-        opacity:1;
-
-        transform:translate(-50%,-50%) scale(.95) rotate(0deg);
-
-        filter:blur(0);
-
-    }
-
-}
-
-
-@keyframes brilloNombre{
-
-    from{
-
-        text-shadow:0 0 5px #ffb6d9;
-
-    }
-
-    to{
-
-        text-shadow:0 0 20px #ff69b4;
-
-    }
-
-}
-.adornoFresa{
-
-    position:absolute;
-
-    top:10px;
-
-    left:15px;
-
-    font-size:35px;
-
-}
-
-
-.adornoFresa.derecha{
-
-    left:auto;
-
-    right:15px;
-
-    top:8px;
-
-    z-index:1;
-
-}
-
-}
-
-}
-/* Efectos flotantes encima de todo */
-
-.flor,
-.fresaFloat,
-.mariposa,
-.estrella{
-
-    z-index:60 !important;
-    position:fixed !important;
-
-}
-#invitacionFinal h1{
-    position:relative;
-    z-index:5;
-}
-.adornoFresa{
-    position:absolute;
-    z-index:1;
-}
-
-#invitacionFinal h1,
-#invitacionFinal h2,
-#invitacionFinal p{
-    position:relative;
-    z-index:10;
-}
-/* ✨ Resplandor mágico del sobre y carta */
-
-.sobre{
-    filter:drop-shadow(0 0 15px rgba(255,105,180,.45));
-    animation:brilloSobre 3s infinite alternate;
-}
-
-
-.carta{
-    box-shadow:
-    0 0 15px rgba(255,105,180,.35),
-    0 20px 45px rgba(0,0,0,.25);
-}
-
-
-.sello{
-    animation:
-    latido 2s infinite,
-    brilloSello 2.5s infinite alternate;
-}
-
-
-@keyframes brilloSobre{
-
-    from{
-        filter:drop-shadow(0 0 8px rgba(255,105,180,.3));
-    }
-
-    to{
-        filter:drop-shadow(0 0 25px rgba(255,105,180,.8));
-    }
-
-}
-
-
-@keyframes brilloSello{
-
-    from{
-        box-shadow:0 0 15px rgba(255,105,180,.4);
-    }
-
-    to{
-        box-shadow:0 0 35px rgba(255,105,180,.9);
-    }
-
-}
-/* ✨ Resplandor inicial Úrsula */
-
-.fresa{
-    filter:drop-shadow(0 0 15px rgba(255,105,180,.7));
-    animation:
-    flotar 2s infinite ease-in-out,
-    brilloFresa 2s infinite alternate;
-}
-
-
-#loader h1{
-    text-shadow:
-    0 0 8px #ffb6d9,
-    0 0 20px #ff69b4;
-
-    animation:brilloNombre 2.5s infinite alternate;
-}
-
-
-@keyframes brilloFresa{
-
-    from{
-        filter:drop-shadow(0 0 8px rgba(255,105,180,.4));
-    }
-
-    to{
-        filter:drop-shadow(0 0 30px rgba(255,105,180,1));
-    }
-
-}
-
-
-@keyframes brilloNombre{
-
-    from{
-        text-shadow:
-        0 0 5px #ffc1dc;
-    }
-
-    to{
-        text-shadow:
-        0 0 25px #ff69b4,
-        0 0 40px #ffb6d9;
-    }
-
-}
-/* ✨ Halo fuerte para la fresa del inicio */
-
-#loader .fresa{
-    position:relative;
-    filter:none;
-    animation:flotar 2s infinite ease-in-out;
-}
-
-#loader .fresa::before{
-    content:"";
-    position:absolute;
-    width:90px;
-    height:90px;
-    left:50%;
-    top:50%;
-    transform:translate(-50%,-50%);
-    background:#ff69b4;
-    border-radius:50%;
-    filter:blur(25px);
-    opacity:.7;
-    z-index:-1;
-    animation:haloFresa 2s infinite alternate;
-}
-
-
-#loader h1{
-    position:relative;
-    color:#e6397b;
-    text-shadow:
-    0 0 10px #ff9fc8,
-    0 0 25px #ff69b4,
-    0 0 45px #ffb6d9;
-    animation:brilloTitulo 1.8s infinite alternate;
-}
-
-
-@keyframes haloFresa{
-
-    from{
-        opacity:.4;
-        transform:translate(-50%,-50%) scale(.8);
-    }
-
-    to{
-        opacity:1;
-        transform:translate(-50%,-50%) scale(1.2);
-    }
-
-}
-
-
-@keyframes brilloTitulo{
-
-    from{
-        text-shadow:
-        0 0 8px #ffb6d9;
-    }
-
-    to{
-        text-shadow:
-        0 0 20px #ff69b4,
-        0 0 40px #ffb6d9;
-    }
-
-}
-/* ✨ Resplandor mágico en textos */
-
-#loader h1,
-.pagina h1{
-
-    text-shadow:
-    0 0 8px #ffb6d9,
-    0 0 18px #ff69b4,
-    0 0 35px #ffb6d9;
-
-    animation:brilloTexto 2s infinite alternate;
-
-}
-
-
-@keyframes brilloTexto{
-
-    from{
-
-        text-shadow:
-        0 0 5px #ffc1dc,
-        0 0 15px #ff69b4;
-
-    }
-
-    to{
-
-        text-shadow:
-        0 0 15px #ff69b4,
-        0 0 35px #ffb6d9,
-        0 0 50px #ff69b4;
-
-    }
-
-}
-/* ✨ Entrada mágica del título del cuento */
-
-.pagina h1{
-
-    animation:
-    aparecerTitulo 1.5s ease,
-    brilloTexto 2s infinite alternate;
-
-}
-
-
-@keyframes aparecerTitulo{
-
-    0%{
-
-        opacity:0;
-
-        transform:translateY(-20px) scale(.8);
-
-    }
-
-
-    100%{
-
-        opacity:1;
-
-        transform:translateY(0) scale(1);
-
-    }
-
-}
-.fondo{
-
-    position:absolute;
-    inset:0;
-
-    background:
-    radial-gradient(circle at 20% 20%, #ffffffaa 0, transparent 20%),
-    radial-gradient(circle at 80% 30%, #ffc1dc 0, transparent 25%),
-    linear-gradient(180deg,#ffc9df,#fff1f8);
-
-    overflow:hidden;
-
-}
-
-
-.fondo::before{
-
-    content:"";
-
-    position:absolute;
-
-    inset:-50%;
-
-    background:
-    radial-gradient(circle,#ffffff 2px,transparent 3px);
-
-    background-size:80px 80px;
-
-    opacity:.35;
-
-    animation:movimientoBrillos 25s linear infinite;
-
-}
-
-
-.fondo::after{
-
-    content:"";
-
-    position:absolute;
-
-    bottom:0;
-
-    left:0;
-
-    width:100%;
-
-    height:180px;
-
-    background:
-    linear-gradient(transparent,#ffd1e6);
-
-    opacity:.8;
-
-}
-
-
-@keyframes movimientoBrillos{
-
-    from{
-        transform:translateY(0);
-    }
-
-    to{
-        transform:translateY(-200px);
-    }
-
-}
-#libro,
-#invitacionFinal{
-
-    background:#ffd6e8 !important;
-
-    border:2px solid #ff9fc8 !important;
-
-    box-shadow:
-    0 0 30px rgba(255,105,180,.5) !important;
-
-}
-/* =================================
-   PÁGINAS DE CUENTO MÁGICO
-================================= */
-
-#libro,
-#invitacionFinal{
-
-    background:
-    radial-gradient(circle at 50% 0%, rgba(255,255,255,.9), transparent 35%),
-    linear-gradient(180deg,#ffe0ee,#fff0f7) !important;
-
-    border:2px solid #ffb6d9 !important;
-
-    box-shadow:
-    0 20px 60px rgba(255,105,180,.25),
-    0 0 35px rgba(255,182,217,.7) !important;
-
-}
-
-
-/* Brillo suave en la orilla */
-
-#libro::before,
-#invitacionFinal::before{
-
-    content:"";
-
-    position:absolute;
-
-    inset:8px;
+    background:rgba(255,255,255,.65);
 
     border-radius:18px;
 
-    border:1px solid rgba(255,255,255,.8);
-
-    pointer-events:none;
+    border:2px dashed #ffb6d9;
 
 }
-
-
-/* Pequeños destellos */
-
-#libro::after,
-#invitacionFinal::after{
-
-    content:"✨";
-
-    position:absolute;
-
-    top:15px;
-
-    right:20px;
-
-    font-size:25px;
-
-    animation:destelloCuento 2s infinite alternate;
-
-}
-
-
-@keyframes destelloCuento{
-
-    from{
-        opacity:.3;
-        transform:scale(.8);
-    }
-
-    to{
-        opacity:1;
-        transform:scale(1.2);
-    }
-
-}
-
-
-
-#libro,
-#invitacionFinal{
-
-    z-index:100 !important;
-
-}
-/* =================================
-   FONDOS MÁGICOS DEFINITIVOS
-================================= */
-
-#libro,
-#invitacionFinal{
-
-    background:
-    radial-gradient(circle at top, #ffffffcc, transparent 35%),
-    linear-gradient(180deg,#ffe0ee,#fff3f9) !important;
-
-    border:2px solid #ffb6d9 !important;
-
-    box-shadow:
-    0 20px 60px rgba(255,105,180,.25),
-    0 0 30px rgba(255,182,217,.7) !important;
-
-}/* 📜 Efecto pergamino mágico */
-
-#libro .pagina,
-#invitacionFinal{
-
-    background:
-    linear-gradient(135deg,
-    rgba(255,255,255,.7),
-    rgba(255,210,230,.8)),
-    #ffe6f1 !important;
-
-    border-radius:20px;
-
-    box-shadow:
-    inset 0 0 30px rgba(255,105,180,.18),
-    0 0 25px rgba(255,105,180,.35);
-
-        }
-
-#libro .pagina::before,
-#invitacionFinal::before{
-
-    content:"✨";
-
-    position:absolute;
-
-    top:12px;
-
-    left:15px;
-
-    font-size:22px;
-
-    opacity:.7;
-
-}
-/* =================================
-   PÁGINA DE CUENTO MÁGICO
-================================= */
-
-#libro{
-
-    background:transparent !important;
-    box-shadow:none !important;
-
-}
-
-
-#libro .pagina{
-
-    position:relative;
-
-    background:
-    radial-gradient(circle at top,#ffffffaa,transparent 40%),
-    linear-gradient(135deg,#ffe0ef,#fff4f9);
-
-    border-radius:25px;
-
-    border:3px solid #ffc1dc;
-
-    padding:30px;
-
-    box-shadow:
-    0 20px 50px rgba(255,105,180,.25),
-    inset 0 0 35px rgba(255,182,217,.5);
-
-    overflow:hidden;
-
-}
-
-
-/* Brillo de página */
-
-#libro .pagina::before{
-
-    content:"✨";
-
-    position:absolute;
-
-    top:15px;
-
-    right:20px;
-
-    font-size:28px;
-
-    animation:brilloPagina 2s infinite alternate;
-
-}
-
-
-#libro .pagina::after{
-
-    content:"🍓";
-
-    position:absolute;
-
-    bottom:15px;
-
-    left:20px;
-
-    font-size:35px;
-
-}
-
-
-@keyframes brilloPagina{
-
-    from{
-
-        opacity:.3;
-        transform:scale(.8);
-
-    }
-
-    to{
-
-        opacity:1;
-        transform:scale(1.2);
-
-    }
-
-}
-/* =================================
-   INVITACIÓN FINAL MÁGICA
-================================= */
-
-#invitacionFinal{
-
-    position:relative;
-
-    margin-top:25px;
-
-    padding:25px 20px;
-
-    background:
-    radial-gradient(circle at top,#ffffffcc,transparent 35%),
-    linear-gradient(180deg,#ffe0ef,#fff3f8) !important;
-
-    border:3px solid #ffb6d9;
-
-    border-radius:25px;
-
-    box-shadow:
-    0 0 25px rgba(255,105,180,.35),
-    inset 0 0 25px rgba(255,182,217,.5);
-
-    overflow:hidden;
-
-    animation:entradaInvitacion 1s ease;
-
-}
-
-
-#invitacionFinal h1{
-
-    font-family:'Pacifico',cursive;
-
-    color:#e63f82;
-
-    text-shadow:
-    0 0 10px #ffb6d9,
-    0 0 25px #ff69b4;
-
-}
-
-
-#invitacionFinal h2{
-
-    color:#ff6fa8;
-
-    font-size:1.5rem;
-
-}
-
-
-/* Decoración de esquinas */
-
-#invitacionFinal::before{
-
-    content:"✨";
-
-    position:absolute;
-
-    top:10px;
-
-    right:15px;
-
-    font-size:25px;
-
-}
-
-
-#invitacionFinal::after{
-
-    content:"🌸";
-
-    position:absolute;
-
-    bottom:10px;
-
-    left:15px;
-
-    font-size:30px;
-
-}
-
 
 .adornoFresa{
 
     position:absolute;
 
-    top:10px;
+    top:18px;
 
-    left:15px;
+    left:18px;
 
     font-size:32px;
 
 }
 
-
 .adornoFresa.derecha{
 
     left:auto;
 
-    right:15px;
+    right:18px;
 
 }
 
+/* Espacio para la foto */
 
-@keyframes entradaInvitacion{
+.fotoUrsula{
 
-    from{
+    width:160px;
 
-        opacity:0;
+height:160px;
 
-        transform:scale(.8) translateY(30px);
+    border-radius:50%;
 
-    }
+    object-fit:cover;
 
-    to{
-
-        opacity:1;
-
-        transform:scale(1) translateY(0);
-
-    }
-
-}
-/* =================================
-   AJUSTE INVITACIÓN FINAL
-================================= */
-
-#invitacionFinal{
-
-    width:100%;
-
-    margin:0;
-
-    padding:25px;
-
-    background:
-    linear-gradient(180deg,#ffe0ef,#fff5fa) !important;
-
-    border-radius:25px;
-
-}
-
-
-/* Quitar apariencia de tarjeta dentro de otra */
-
-#libro{
-
-    padding:0;
-
-    background:transparent !important;
-
-    box-shadow:none !important;
-
-}
-/* Ajuste página del cuento */
-
-#libro{
-
-    width:340px;
-    max-width:90%;
-
-    padding:20px;
-
-    background:
-    linear-gradient(180deg,#ffe0ef,#fff5fa) !important;
-
-    border-radius:25px;
+    border:6px solid #fff;
 
     box-shadow:
-    0 20px 50px rgba(255,105,180,.25);
+        0 0 25px rgba(255,105,180,.5);
+
+    margin:15px 0;
 
 }
 
+/* ==========================
+        RESPONSIVE
+========================== */
 
-/* La invitación final ocupa la página */
+@media(max-width:480px){
 
-#invitacionFinal{
+    .sobre{
 
-    width:100%;
+        width:280px;
 
-}
-/* =================================
-   RECUPERAR TAMAÑO ORIGINAL
-================================= */
+        height:195px;
 
-#libro{
+    }
 
-    width:340px !important;
-    max-width:92% !important;
+    #libro{
 
-    padding:30px !important;
+        width:92%;
 
-    background:#ffeef7 !important;
+    }
 
-}
+    .pagina{
 
+        padding:22px;
 
-#libro .pagina{
+    }
 
-    width:100%;
+    .pagina h1{
 
-}
+        font-size:1.8rem;
 
+    }
 
-#invitacionFinal{
+    #invitacionFinal{
 
-    width:100% !important;
+        padding:22px;
 
-    margin-top:20px;
+    }
 
-    box-sizing:border-box;
+    #invitacionFinal h1{
 
-}
-/* RESTAURAR ESCALA */
+        font-size:1.8rem;
 
-#libro{
-    transform:translate(-50%,-50%) scale(.7) !important;
-    width:340px !important;
-    max-width:92% !important;
-    padding:30px !important;
-}
+    }
 
-#libro.mostrar{
-    transform:translate(-50%,-50%) scale(1) !important;
-}
+    .fotoUrsula{
 
-#libro .pagina{
-    width:100% !important;
-    box-sizing:border-box;
-}
+        width:130px;
 
-#invitacionFinal{
-    transform:none !important;
-    width:100% !important;
-    max-width:100% !important;
-}
-/* Ajuste página Había una vez */
+        height:160px;
 
-#libro .pagina{
+    border-radius:50%;
 
-    width:340px !important;
-    max-width:92% !important;
+    object-fit:cover;
 
-    padding:30px !important;
+    border:6px solid #fff;
 
-    box-sizing:border-box;
+    box-shadow:
+        0 0 25px rgba(255,105,180,.5);
+
+    margin:15px 0;
 
 }
 
+/* ==========================
+        RESPONSIVE
+========================== */
 
-#libro{
+@media(max-width:480px){
 
-    width:340px !important;
-    max-width:92% !important;
+    .sobre{
+
+        width:280px;
+
+        height:195px;
+
+    }
+
+    #libro{
+
+        width:92%;
+
+    }
+
+    .pagina{
+
+        padding:22px;
+
+    }
+
+    .pagina h1{
+
+        font-size:1.8rem;
+
+    }
+
+    #invitacionFinal{
+
+        padding:22px;
+
+    }
+
+    #invitacionFinal h1{
+
+        font-size:1.8rem;
+
+    }
+
+    .fotoUrsula{
+
+        width:130px;
+
+    height:160px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:6px solid #fff;
+
+    box-shadow:
+        0 0 25px rgba(255,105,180,.5);
+
+    margin:15px 0;
 
 }
+
+/* ==========================
+        RESPONSIVE
+========================== */
+
+@media(max-width:480px){
+
+    .sobre{
+
+        width:280px;
+
+        height:195px;
+
+    }
+
+    #libro{
+
+        width:92%;
+
+    }
+
+    .pagina{
+
+        padding:22px;
+
+    }
+
+    .pagina h1{
+
+        font-size:1.8rem;
+
+    }
+
+    #invitacionFinal{
+
+        padding:22px;
+
+    }
+
+    #invitacionFinal h1{
+
+        font-size:1.8rem;
+
+    }
+
+    .fotoUrsula{
+
+        width:130px;
+
+        height:130px;
+
+            
