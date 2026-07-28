@@ -1072,3 +1072,12 @@ background:radial-gradient(circle at top,#ffffffaa,transparent 35%),
     margin:0 !important;
     transform:translate(-50%,-50%) !important;
 }
+/* Ajuste sello sobre 3D */
+.sello{
+    transform:translate(-50%,-50%) translateZ(20px);
+    z-index:10;
+}
+
+.tapa{
+    z-index:5;
+}
