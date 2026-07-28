@@ -667,3 +667,89 @@ background:radial-gradient(circle at top,#ffffffaa,transparent 35%),
     0 0 30px rgba(255,105,180,.5) !important;
 
         }
+/* =================================
+   PÁGINA DE CUENTO MÁGICO
+================================= */
+
+#libro{
+
+    background:transparent !important;
+    box-shadow:none !important;
+
+}
+
+
+#libro .pagina{
+
+    position:relative;
+
+    background:
+    radial-gradient(circle at top,#ffffffaa,transparent 40%),
+    linear-gradient(135deg,#ffe0ef,#fff4f9);
+
+    border-radius:25px;
+
+    border:3px solid #ffc1dc;
+
+    padding:30px;
+
+    box-shadow:
+    0 20px 50px rgba(255,105,180,.25),
+    inset 0 0 35px rgba(255,182,217,.5);
+
+    overflow:hidden;
+
+}
+
+
+/* Brillo de página */
+
+#libro .pagina::before{
+
+    content:"✨";
+
+    position:absolute;
+
+    top:15px;
+
+    right:20px;
+
+    font-size:28px;
+
+    animation:brilloPagina 2s infinite alternate;
+
+}
+
+
+#libro .pagina::after{
+
+    content:"🍓";
+
+    position:absolute;
+
+    bottom:15px;
+
+    left:20px;
+
+    font-size:35px;
+
+}
+
+
+@keyframes brilloPagina{
+
+    from{
+
+        opacity:.3;
+        transform:scale(.8);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:scale(1.2);
+
+    }
+
+}
