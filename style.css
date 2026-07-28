@@ -434,7 +434,8 @@ body{
 
     flex-direction:column;
 
-    justify-content:center;
+    justify-content:flex-start;
+padding-top:35px;
 
     align-items:center;
 
