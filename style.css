@@ -705,3 +705,49 @@ body{
     }
 
 }
+/* ✨ Resplandor inicial Úrsula */
+
+.fresa{
+    filter:drop-shadow(0 0 15px rgba(255,105,180,.7));
+    animation:
+    flotar 2s infinite ease-in-out,
+    brilloFresa 2s infinite alternate;
+}
+
+
+#loader h1{
+    text-shadow:
+    0 0 8px #ffb6d9,
+    0 0 20px #ff69b4;
+
+    animation:brilloNombre 2.5s infinite alternate;
+}
+
+
+@keyframes brilloFresa{
+
+    from{
+        filter:drop-shadow(0 0 8px rgba(255,105,180,.4));
+    }
+
+    to{
+        filter:drop-shadow(0 0 30px rgba(255,105,180,1));
+    }
+
+}
+
+
+@keyframes brilloNombre{
+
+    from{
+        text-shadow:
+        0 0 5px #ffc1dc;
+    }
+
+    to{
+        text-shadow:
+        0 0 25px #ff69b4,
+        0 0 40px #ffb6d9;
+    }
+
+}
