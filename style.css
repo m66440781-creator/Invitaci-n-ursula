@@ -1047,3 +1047,20 @@ background:radial-gradient(circle at top,#ffffffaa,transparent 35%),
         transform:scale(1.15);
     }
 }
+/* CORRECCIÓN CENTRADO SOBRE */
+
+.sobre{
+    left:50%;
+    top:50%;
+    margin:0;
+}
+
+.sobre:not(.abierto){
+    transform:translate(-50%,-50%) !important;
+}
+
+.sobre.abierto{
+    transform:translate(-50%,-50%) scale(.5) !important;
+    opacity:0;
+    pointer-events:none;
+}
