@@ -211,7 +211,19 @@ body{
     transform:translate(-50%,-50%) scale(.7);
     width:340px;
     max-width:92%;
-    background:#fffdf8;
+    #libro{
+
+    background:
+    radial-gradient(circle at top,#ffffffaa,transparent 40%),
+    linear-gradient(180deg,#ffe1ef,#fff0f7);
+
+    border:2px solid #ffc1dc;
+
+    box-shadow:
+    0 20px 60px rgba(255,105,180,.25),
+    0 0 25px rgba(255,105,180,.35);
+
+}
     border-radius:18px;
     padding:30px;
     box-shadow:0 20px 60px rgba(0,0,0,.25);
