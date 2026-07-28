@@ -1,7 +1,7 @@
-/* ==========================
-   INVITACIÓN ÚRSULA NAZARETH
-   ROSITA FRESITA
-========================== */
+/*==================================
+        INVITACIÓN ÚRSULA
+        ROSITA FRESITA
+==================================*/
 
 *{
     margin:0;
@@ -9,24 +9,28 @@
     box-sizing:border-box;
 }
 
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    overflow:hidden;
-    background:linear-gradient(180deg,#ffd4e7,#fff6fb);
+html{
+    scroll-behavior:smooth;
 }
 
-/* ==========================
-          LOADER
-========================== */
+body{
+    font-family:'Nunito',sans-serif;
+    overflow:hidden;
+    background:#ffd8e6;
+}
+
+/*=========================
+        LOADER
+=========================*/
 
 #loader{
     position:fixed;
     inset:0;
-    background:linear-gradient(180deg,#ffbfd8,#fff4f9);
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
+    background:linear-gradient(180deg,#ffd4ea,#fff3f8);
     z-index:9999;
     transition:1s;
 }
@@ -36,82 +40,298 @@ body{
     visibility:hidden;
 }
 
-#loader .fresa{
-    font-size:90px;
-    animation:flotar 2s ease-in-out infinite;
-    position:relative;
-}
-
-#loader .fresa::before{
-    content:"";
-    position:absolute;
-    left:50%;
-    top:50%;
-    width:90px;
-    height:90px;
-    transform:translate(-50%,-50%);
-    background:#ff69b4;
-    border-radius:50%;
-    filter:blur(25px);
-    opacity:.7;
-    z-index:-1;
-}
-
 #loader h1{
-    margin-top:20px;
     font-family:'Pacifico',cursive;
     color:#e63f82;
     font-size:3rem;
-    text-shadow:
-    0 0 10px #ffb6d9,
-    0 0 25px #ff69b4,
-    0 0 45px #ffd6e8;
+    margin-top:20px;
 }
 
 #loader p{
-    margin-top:15px;
-    color:#7b5b66;
+    margin-top:10px;
+    color:#87556a;
     font-size:1.1rem;
 }
 
-/* ==========================
-       CONTENIDO
-========================== */
+.fresa{
+    font-size:70px;
+    animation:flotar 2s ease-in-out infinite;
+}
+
+/*=========================
+        CONTENIDO
+=========================*/
 
 #contenido{
     position:relative;
     width:100%;
     height:100vh;
     overflow:hidden;
+    display:block;
 }
 
-/* ==========================
-      FONDO MÁGICO
-========================== */
+/*=========================
+          FONDO
+=========================*/
 
 .fondo{
     position:absolute;
     inset:0;
-    background:
-    radial-gradient(circle at 20% 20%,rgba(255,255,255,.8),transparent 25%),
-    radial-gradient(circle at 80% 30%,rgba(255,182,217,.7),transparent 25%),
-    linear-gradient(180deg,#ffd3e8,#fff4fa);
+    background:linear-gradient(#ffd4ea,#fff2f8);
+    z-index:0;
 }
 
 .fondo::before{
     content:"";
     position:absolute;
-    inset:-50%;
+    inset:-100%;
     background:
-    radial-gradient(circle,#fff 2px,transparent 3px);
-    background-size:80px 80px;
-    opacity:.35;
-    animation:subirBrillos 25s linear infinite;
+    radial-gradient(circle,#ffffffaa 1px,transparent 2px);
+    background-size:60px 60px;
+    animation:brillos 20s linear infinite;
+    opacity:.6;
 }
 
-/* ==========================
+/*=========================
+         FLORES
+=========================*/
+
+.flores{
+    position:absolute;
+    inset:0;
+    overflow:hidden;
+    pointer-events:none;
+    z-index:1;
+}
+
+/*=========================
+          SOBRE
+=========================*/
+
+.sobre{
+    position:absolute;
+    left:50%;
+    top:52%;
+    transform:translate(-50%,-50%);
+    width:320px;
+    height:220px;
+    cursor:pointer;
+    perspective:1200px;
+    transition:.8s;
+    z-index:5;
+}
+
+.sobre:hover{
+    transform:translate(-50%,-52%) scale(1.03);
+}
+
+.carta{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:#ffeaf3;
+    border-radius:14px;
+    box-shadow:0 18px 45px rgba(0,0,0,.25);
+    overflow:hidden;
+}
+
+.carta::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    clip-path:polygon(0 100%,50% 45%,100% 100%);
+    background:#ff92bf;
+    z-index:2;
+}
+
+.carta::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    border:8px solid #ffacd0;
+    border-radius:14px;
+    pointer-events:none;
+}
+
+.tapa{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:#ff79b3;
+    clip-path:polygon(0 0,50% 55%,100% 0);
+    transform-origin:top;
+    transition:1s;
+    z-index:5;
+}
+
+.sello{
+    position:absolute;
+    left:50%;
+    top:55%;
+    transform:translate(-50%,-50%);
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    background:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:42px;
+    box-shadow:0 0 25px rgba(255,105,180,.4);
+    animation:latido 2s infinite;
+    z-index:6;
+}
+
+.carta h2{
+    position:absolute;
+    bottom:20px;
+    width:100%;
+    text-align:center;
+    font-family:'Pacifico',cursive;
+    color:#d64079;
+    font-size:28px;
+    z-index:7;
+}
+
+.sobre.abierto .tapa{
+    transform:rotateX(180deg);
+}
+
+.sobre.abierto{
+    transform:translate(-50%,-65%);
+}
+
+/*=========================
+           LIBRO
+=========================*/
+
+#libro{
+    position:absolute;
+    left:50%;
+    top:55%;
+    transform:translate(-50%,-50%) scale(.7);
+    width:340px;
+    max-width:92%;
+    background:#fffdf8;
+    border-radius:18px;
+    padding:30px;
+    box-shadow:0 20px 60px rgba(0,0,0,.25);
+    opacity:0;
+    visibility:hidden;
+    transition:1s;
+    z-index:20;
+}
+
+#libro.mostrar{
+    opacity:1;
+    visibility:visible;
+    transform:translate(-50%,-50%) scale(1);
+}
+
+.pagina h1{
+    font-family:'Pacifico',cursive;
+    color:#d83d7a;
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.pagina p{
+    line-height:1.7;
+    color:#6f5a61;
+    min-height:130px;
+}
+
+/*=========================
+          BOTÓN
+=========================*/
+
+#continuar{
+    margin-top:25px;
+    width:100%;
+    border:none;
+    border-radius:40px;
+    padding:15px;
+    background:#ff6fa8;
+    color:#fff;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+    box-shadow:0 10px 25px rgba(255,105,180,.35);
+}
+
+#continuar:hover{
+    background:#e84c8d;
+}
+
+#continuar:active{
+    transform:scale(.97);
+}
+
+/*=========================
+     ELEMENTOS MÁGICOS
+=========================*/
+
+.flor{
+    position:absolute;
+    font-size:26px;
+    animation:caerFlor linear infinite;
+    pointer-events:none;
+}
+
+.fresaFloat{
+    position:absolute;
+    font-size:24px;
+    animation:fresaCae linear infinite;
+    pointer-events:none;
+}
+
+.mariposa{
+    position:absolute;
+    font-size:28px;
+    animation:volar 10s linear infinite;
+    pointer-events:none;
+}
+
+.estrella{
+    position:absolute;
+    width:5px;
+    height:5px;
+    border-radius:50%;
+    background:#fff;
+    box-shadow:0 0 12px #fff;
+    animation:brillar 2.5s infinite alternate;
+}
+
+/*=========================
+       RESPONSIVE
+=========================*/
+
+@media(max-width:480px){
+
+    #loader h1{
+        font-size:2.3rem;
+    }
+
+    .sobre{
+        width:290px;
+        height:200px;
+    }
+
+    #libro{
+        width:92%;
+        padding:22px;
+    }
+
+    .pagina h1{
+        font-size:1.8rem;
+    }
+
+}
+
+/*=========================
         ANIMACIONES
-========================== */
+=========================*/
 
 @keyframes flotar{
 
@@ -125,234 +345,29 @@ body{
 
 }
 
-@keyframes subirBrillos{
+@keyframes brillos{
 
-    from{
+    0%{
         transform:translateY(0);
     }
 
-    to{
-        transform:translateY(-200px);
+    100%{
+        transform:translateY(-300px);
     }
 
-}
-
-/* ==========================
-          SOBRE
-========================== */
-
-.sobre{
-    position:absolute;
-    left:50%;
-    top:50%;
-    transform:translate(-50%,-50%);
-    width:320px;
-    height:220px;
-    cursor:pointer;
-    z-index:10;
-    transition:.8s;
-    animation:flotar 3s ease-in-out infinite;
-    filter:drop-shadow(0 0 20px rgba(255,105,180,.5));
-}
-
-.tapa{
-    position:absolute;
-    width:100%;
-    height:110px;
-    background:#ff7eb5;
-    clip-path:polygon(0 0,100% 0,50% 100%);
-    transform-origin:top;
-    transition:1s;
-    z-index:3;
-}
-
-.carta{
-    position:absolute;
-    left:50%;
-    bottom:0;
-    transform:translateX(-50%);
-    width:92%;
-    height:185px;
-    background:linear-gradient(180deg,#fffdfd,#ffeef7);
-    border-radius:18px;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    box-shadow:0 15px 40px rgba(0,0,0,.25);
-    transition:1s;
-}
-
-.sello{
-    width:70px;
-    height:70px;
-    border-radius:50%;
-    background:#ff5c99;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size:34px;
-    margin-bottom:12px;
-    box-shadow:0 0 25px rgba(255,105,180,.8);
-    animation:latido 2s infinite;
-}
-
-.carta h2{
-    color:#d83d7a;
-    font-family:'Pacifico',cursive;
-}
-
-.sobre.abierto .tapa{
-    transform:rotateX(180deg);
-}
-
-.sobre.abierto .carta{
-    transform:translateX(-50%) translateY(-90px);
-}
-
-/* ==========================
-            LIBRO
-========================== */
-
-#libro{
-    position:absolute;
-    left:50%;
-    top:50%;
-    transform:translate(-50%,-50%) scale(.8);
-
-    width:340px;
-    max-width:92%;
-
-    opacity:0;
-    visibility:hidden;
-
-    transition:1s;
-    z-index:30;
-}
-
-#libro.mostrar{
-    opacity:1;
-    visibility:visible;
-    transform:translate(-50%,-50%) scale(1);
-}
-
-.pagina{
-    position:relative;
-
-    background:
-    linear-gradient(180deg,#fff8fc,#ffe8f3);
-
-    border-radius:25px;
-
-    padding:28px;
-
-    border:3px solid #ffc3dd;
-
-    box-shadow:
-    0 20px 50px rgba(255,105,180,.25),
-    inset 0 0 25px rgba(255,255,255,.6);
-}
-
-.pagina h1{
-    text-align:center;
-    color:#d83d7a;
-    font-family:'Pacifico',cursive;
-    margin-bottom:18px;
-    text-shadow:
-        0 0 10px #ffb6d9,
-        0 0 20px #ff69b4;
-}
-
-.pagina p{
-    color:#6f5a61;
-    line-height:1.7;
-    min-height:130px;
-}
-
-/* ==========================
-           BOTÓN
-========================== */
-
-#continuar{
-    width:100%;
-    margin-top:20px;
-    padding:15px;
-    border:none;
-    border-radius:40px;
-    background:#ff6fa8;
-    color:#fff;
-    font-size:18px;
-    font-weight:bold;
-    cursor:pointer;
-    transition:.3s;
-}
-
-#continuar:hover{
-    background:#e84c8d;
 }
 
 @keyframes latido{
 
     0%,100%{
-        transform:scale(1);
+        transform:translate(-50%,-50%) scale(1);
     }
 
     50%{
-        transform:scale(1.08);
+        transform:translate(-50%,-50%) scale(1.08);
     }
 
-        }
-
-/* ==========================
-    EFECTOS MÁGICOS
-========================== */
-
-.flor,
-.fresaFloat,
-.mariposa,
-.estrella{
-    position:fixed;
-    pointer-events:none;
-    z-index:999;
 }
-
-/* Flores */
-
-.flor{
-    font-size:28px;
-    animation:caerFlor linear infinite;
-}
-
-/* Fresas */
-
-.fresaFloat{
-    font-size:26px;
-    animation:fresaCae linear infinite;
-}
-
-/* Mariposas */
-
-.mariposa{
-    font-size:30px;
-    animation:volar 12s linear infinite;
-}
-
-/* Destellos */
-
-.estrella{
-    width:5px;
-    height:5px;
-    border-radius:50%;
-    background:#fff;
-    box-shadow:
-        0 0 10px #fff,
-        0 0 20px #ffddee;
-    animation:brillar 2s infinite alternate;
-}
-
-/* ==========================
-       ANIMACIONES
-========================== */
 
 @keyframes caerFlor{
 
@@ -375,11 +390,11 @@ body{
 @keyframes fresaCae{
 
     0%{
-        transform:translateY(-120px) rotate(0deg);
+        transform:translateY(-120px);
     }
 
     100%{
-        transform:translateY(120vh) rotate(360deg);
+        transform:translateY(120vh);
     }
 
 }
@@ -387,23 +402,23 @@ body{
 @keyframes volar{
 
     0%{
-        transform:translate(-15vw,70vh);
+        transform:translate(-10vw,70vh);
     }
 
     25%{
-        transform:translate(20vw,35vh);
+        transform:translate(20vw,40vh);
     }
 
     50%{
-        transform:translate(55vw,55vh);
+        transform:translate(50vw,55vh);
     }
 
     75%{
-        transform:translate(85vw,20vh);
+        transform:translate(80vw,25vh);
     }
 
     100%{
-        transform:translate(120vw,60vh);
+        transform:translate(110vw,60vh);
     }
 
 }
@@ -411,209 +426,13 @@ body{
 @keyframes brillar{
 
     from{
-        opacity:.3;
-        transform:scale(.7);
+        opacity:.2;
+        transform:scale(.6);
     }
 
     to{
         opacity:1;
-        transform:scale(1.6);
-    }
-}
-        /* ==========================
-     INVITACIÓN FINAL
-========================== */
-
-#invitacionFinal{
-
-    position:absolute;
-
-    inset:0;
-
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:flex-start;
-
-    align-items:center;
-
-    text-align:center;
-
-    padding:35px 30px 30px;
-
-    background:
-    radial-gradient(circle at top,#ffffffcc,transparent 35%),
-    linear-gradient(180deg,#ffe3f0,#fff5fa);
-
-    border-radius:25px;
-
-    opacity:0;
-
-    visibility:hidden;
-
-    transform:scale(.85);
-
-    transition:all .8s ease;
-
-    overflow-y:auto;
-
-   box-sizing:border-box;
-max-width:100%;
-max-height:100%;
-   
-}
-
-#invitacionFinal.mostrar{
-
-    opacity:1;
-
-    visibility:visible;
-
-    transform:scale(1);
-
-}
-
-#invitacionFinal h1{
-
-    font-family:'Pacifico',cursive;
-
-    color:#e63f82;
-
-    font-size:2.2rem;
-
-    margin-bottom:10px;
-
-    text-shadow:
-        0 0 10px #ffb6d9,
-        0 0 25px #ff69b4;
-
-}
-
-#invitacionFinal h2{
-
-    color:#ff6fa8;
-
-    margin-bottom:20px;
-
-}
-
-#invitacionFinal p{
-
-    color:#6f5a61;
-
-    line-height:1.7;
-
-    margin:8px 0;
-
-}
-
-#invitacionFinal .mensaje{
-
-    margin-top:20px;
-
-    padding:18px;
-
-    background:rgba(255,255,255,.65);
-
-    border-radius:18px;
-
-    border:2px dashed #ffb6d9;
-
-}
-
-.adornoFresa{
-
-    position:absolute;
-
-    top:18px;
-
-    left:18px;
-
-    font-size:32px;
-
-}
-
-.adornoFresa.derecha{
-
-    left:auto;
-
-    right:18px;
-
-}
-
-/* Espacio para la foto */
-
-.fotoUrsula{
-
-    width:160px;
-
-height:160px;
-
-    border-radius:50%;
-
-    object-fit:cover;
-
-    border:6px solid #fff;
-
-    box-shadow:
-        0 0 25px rgba(255,105,180,.5);
-
-    margin:15px 0;
-
-}
-
-/* ==========================
-        RESPONSIVE
-========================== */
-
-@media(max-width:480px){
-
-    .sobre{
-
-        width:280px;
-
-        height:195px;
-
-    }
-
-    #libro{
-
-        width:92%;
-
-    }
-
-    .pagina{
-
-        padding:22px;
-
-    }
-
-    .pagina h1{
-
-        font-size:1.8rem;
-
-    }
-
-    #invitacionFinal{
-
-        padding:22px;
-
-    }
-
-    #invitacionFinal h1{
-
-        font-size:1.8rem;
-
-    }
-
-    .fotoUrsula{
-
-        width:130px;
-
-        height:130px;
+        transform:scale(1.5);
     }
 
 }
-        
-        
