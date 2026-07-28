@@ -1081,3 +1081,12 @@ background:radial-gradient(circle at top,#ffffffaa,transparent 35%),
 .tapa{
     z-index:5;
 }
+/* Ajuste tapa del sobre */
+.tapa{
+    height:55%;
+    transform-origin:top;
+}
+
+.sobre.abierto .tapa{
+    transform:rotateX(180deg);
+}
