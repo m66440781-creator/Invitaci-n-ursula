@@ -468,7 +468,19 @@ body{
 
     padding:22px;
 
-    background:#fffdf8;
+    #invitacionFinal{
+
+    background:
+    radial-gradient(circle at top,#ffffffaa,transparent 35%),
+    linear-gradient(180deg,#ffe4f1,#fff3f8);
+
+    border:2px solid #ffc1dc;
+
+    box-shadow:
+    0 20px 60px rgba(255,105,180,.25),
+    0 0 30px rgba(255,105,180,.35);
+
+}
 
     border-radius:25px;
 
