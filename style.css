@@ -1147,13 +1147,3 @@ background:radial-gradient(circle at top,#ffffffaa,transparent 35%),
     z-index:50;
     transform:translate(-50%,-50%);
 }
-/* Sello siempre encima del sobre */
-.sello{
-    z-index:999 !important;
-    transform:translate(-50%,-50%) !important;
-    position:absolute;
-}
-
-.tapa{
-    z-index:1 !important;
-}
