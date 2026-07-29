@@ -982,3 +982,25 @@ background:radial-gradient(circle at top,#ffffffaa,transparent 35%),
     }
 
 }
+#fresaInicio{
+
+    cursor:pointer;
+
+    animation:
+    latido 2s infinite,
+    brilloFresa 2s infinite alternate;
+
+}
+
+
+@keyframes brilloFresa{
+
+    from{
+        filter:drop-shadow(0 0 5px #ffb6d9);
+    }
+
+    to{
+        filter:drop-shadow(0 0 25px #ff69b4);
+    }
+
+}
