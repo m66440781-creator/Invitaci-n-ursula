@@ -1071,7 +1071,6 @@ background:radial-gradient(circle at top,#ffffffaa,transparent 35%),
 
 }
 
-
 @keyframes subirSobre{
 
     from{
@@ -1081,7 +1080,14 @@ background:radial-gradient(circle at top,#ffffffaa,transparent 35%),
 
     }
 
-    to{
+    70%{
+
+        transform:translate(-50%, -55%);
+        opacity:1;
+
+    }
+
+    100%{
 
         transform:translate(-50%, -50%);
         opacity:1;
