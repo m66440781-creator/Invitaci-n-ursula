@@ -201,7 +201,8 @@ body{
 }
 
 .sobre.abierto .tapa{
-    transform:rotateX(180deg);
+    transform:rotateX(180deg) translateZ(5px);
+}
 
 }
 /*=========================
