@@ -1095,3 +1095,38 @@ background:radial-gradient(circle at top,#ffffffaa,transparent 35%),
     }
 
 }
+/* Ajuste final posición sobre */
+
+.sobre{
+
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+
+}
+
+
+.entradaSobre{
+
+    animation:subirSobre 1.5s ease forwards;
+
+}
+
+
+@keyframes subirSobre{
+
+    0%{
+
+        transform:translate(-50%,100vh);
+        opacity:0;
+
+    }
+
+    100%{
+
+        transform:translate(-50%,-50%);
+        opacity:1;
+
+    }
+
+}
