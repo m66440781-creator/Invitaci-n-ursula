@@ -133,7 +133,7 @@ body{
 .sobre{
     position:absolute;
     left:50%;
-    top:52%;
+    top:50%;
     transform:translate(-50%,-50%);
     width:320px;
     height:220px;
