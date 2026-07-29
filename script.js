@@ -10,7 +10,8 @@ const libro = document.getElementById("libro");
 const historia = document.getElementById("historia");
 const continuar = document.getElementById("continuar");
 
-const texto = "Había una vez una pequeña llamada yadira que decia esperaa que lleguela noche llegaba la noche y se hacia la loca y se dormia . 🍓✨";
+const texto = Había una vez una pequeña llamada Úrsula Nazareth... que estaba a punto de cumplir 4 añitos. Y quiere compartir este día tan especial contigo. 🍓✨";
+
 
 let i = 0;
 
