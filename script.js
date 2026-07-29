@@ -41,19 +41,21 @@ fresaInicio.addEventListener("click", () => {
     }
 
 
-    bienvenida.classList.add("desaparecer");
-
-loader.classList.add("oculto");
-contenido.classList.add("mostrar");
-    
-    setTimeout(()=>{
-
-        bienvenida.style.display="none";
-
-        sobre.classList.add("entradaSobre");
+bienvenida.classList.add("desaparecer");
 
 
-    },1500);
+setTimeout(()=>{
+
+    loader.classList.add("oculto");
+
+    contenido.classList.add("mostrar");
+
+    bienvenida.style.display="none";
+
+    sobre.classList.add("entradaSobre");
+
+
+},1500);
 
 
 });
