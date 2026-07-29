@@ -955,15 +955,40 @@ background:radial-gradient(circle at top,#ffffffaa,transparent 35%),
 }
 
 
-#mensajeBienvenida{
+.textoBienvenida{
 
-    margin-top:8px;
+    position:relative;
 
-    font-size:1rem;
+    max-width:290px;
 
-    line-height:1.6;
+    background:rgba(255,255,255,.80);
 
-    color:#87556a;
+    padding:20px;
+
+    border-radius:25px;
+
+    box-shadow:
+    0 10px 25px rgba(255,105,180,.25);
+
+}
+.textoBienvenida::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:-18px;
+
+    top:45px;
+
+    width:0;
+    height:0;
+
+    border-top:15px solid transparent;
+
+    border-bottom:15px solid transparent;
+
+    border-right:20px solid rgba(255,255,255,.80);
 
 }
 
