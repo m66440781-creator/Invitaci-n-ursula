@@ -5,6 +5,8 @@
 
 const loader = document.getElementById("loader");
 const contenido = document.getElementById("contenido");
+const fresaInicio = document.getElementById("fresaInicio");
+const bienvenida = document.querySelector(".bienvenida");
 const sobre = document.getElementById("sobre");
 const libro = document.getElementById("libro");
 const historia = document.getElementById("historia");
