@@ -971,26 +971,6 @@ background:radial-gradient(circle at top,#ffffffaa,transparent 35%),
     0 10px 25px rgba(255,105,180,.25);
 
 }
-.textoBienvenida::before{
-
-    content:"";
-
-    position:absolute;
-
-    left:-18px;
-
-    top:45px;
-
-    width:0;
-    height:0;
-
-    border-top:15px solid transparent;
-
-    border-bottom:15px solid transparent;
-
-    border-right:20px solid rgba(255,255,255,.80);
-
-}
 
 
 @keyframes aparecerUrsula{
@@ -1053,36 +1033,16 @@ background:radial-gradient(circle at top,#ffffffaa,transparent 35%),
 
     display:flex;
 
+    flex-direction:column;
+
     align-items:center;
 
     justify-content:center;
 
-    gap:20px;
-
     width:90%;
 
-    max-width:700px;
+    max-width:350px;
 
-}
-
-@media(max-width:650px){
-
-    .bienvenida{
-
-        flex-direction:column;
-
-    }
-
-    .textoBienvenida::before{
-
-        display:none;
-
-    }
-
-    .textoBienvenida{
-
-        text-align:center;
-
-    }
+    margin-bottom:20px;
 
 }
