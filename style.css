@@ -845,3 +845,36 @@ background:radial-gradient(circle at top,#ffffffaa,transparent 35%),
     }
 
 }
+
+/* Brillo mágico del sobre */
+
+.sobre{
+    filter:
+    drop-shadow(0 10px 25px rgba(255,105,180,.35));
+}
+
+
+.sobre::after{
+    content:"";
+    position:absolute;
+    inset:-25px;
+    border-radius:35px;
+    background:radial-gradient(circle,
+    rgba(255,182,217,.5),
+    transparent 70%);
+    z-index:-1;
+    animation:brilloSobre 2.5s infinite alternate;
+}
+
+
+@keyframes brilloSobre{
+    from{
+        opacity:.4;
+        transform:scale(.9);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1.1);
+    }
+}
