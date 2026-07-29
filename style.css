@@ -942,15 +942,13 @@ background:radial-gradient(circle at top,#ffffffaa,transparent 35%),
 
 #mensajeBienvenida{
 
-    text-align:center;
+    margin-top:8px;
 
-    font-size:1.15rem;
-
-    color:#87556a;
+    font-size:1rem;
 
     line-height:1.6;
 
-    max-width:300px;
+    color:#87556a;
 
 }
 
