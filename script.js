@@ -197,7 +197,7 @@ function crearNubes(cantidad){
 
         nube.className="nube";
 
-        nube.innerHTML="☁️";
+        nubenube.innerHTML="🍓";
 
         nube.style.left=(-20-Math.random()*30)+"vw";
         nube.style.top=(5+Math.random()*35)+"vh";
