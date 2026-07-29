@@ -903,3 +903,22 @@ background:radial-gradient(circle at top,#ffffffaa,transparent 35%),
     z-index:1;
     animation:moverNube linear infinite;
 }
+.nube{
+    position:absolute;
+    opacity:.25;
+    pointer-events:none;
+    z-index:1;
+    animation:moverNube linear infinite;
+}
+
+@keyframes moverNube{
+
+    from{
+        transform:translateX(0);
+    }
+
+    to{
+        transform:translateX(140vw);
+    }
+
+}
