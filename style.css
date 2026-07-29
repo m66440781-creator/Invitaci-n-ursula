@@ -1314,3 +1314,44 @@ background:radial-gradient(circle at top,#ffffffaa,transparent 35%),
     }
 
 }
+
+.fondo::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    bottom:0;
+
+    width:100%;
+    height:140px;
+
+    background:
+    radial-gradient(circle,#7ed957 8px,transparent 9px) 0 100%/40px 40px,
+    radial-gradient(circle,#5fcf65 10px,transparent 11px) 20px 100%/40px 40px,
+    linear-gradient(#88e06d,#6ecb63);
+
+    opacity:.8;
+
+}
+
+.fondo::after{
+
+    content:"🍓 🍓 🌸 🍓 🌸 🍓";
+
+    position:absolute;
+
+    bottom:25px;
+
+    width:100%;
+
+    text-align:center;
+
+    font-size:28px;
+
+    opacity:.35;
+
+    letter-spacing:25px;
+
+}
