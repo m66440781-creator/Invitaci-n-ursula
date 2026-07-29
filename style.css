@@ -51,7 +51,7 @@ body{
     font-family:'Pacifico',cursive;
     color:#e63f82;
     font-size:3rem;
-    margin-top:20px;
+    margin-top:5px;
 }
 
 #loader p{
@@ -922,7 +922,7 @@ background:radial-gradient(circle at top,#ffffffaa,transparent 35%),
 
 .foto-ursula{
 
-    width:220px;
+    width:170px;
     max-width:70vw;
 
     margin-bottom:15px;
