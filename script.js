@@ -76,6 +76,7 @@ sobre.addEventListener("click", () => {
         crearMariposas(4);
         crearEstrellas(40);
         crearNubes(10);
+        crearArboles();
         
         if(typeof confetti === "function"){
 
@@ -247,3 +248,21 @@ function crearNubes(cantidad){
     }
 
             }
+
+function crearArboles(){
+
+    const izquierda=document.createElement("div");
+    izquierda.className="arbol";
+    izquierda.innerHTML="🍓🌳";
+
+    const derecha=document.createElement("div");
+    derecha.className="arbol";
+    derecha.innerHTML="🌳🍓";
+
+    izquierda.style.left="10px";
+    derecha.style.right="10px";
+
+    document.body.appendChild(izquierda);
+    document.body.appendChild(derecha);
+
+}
