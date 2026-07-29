@@ -914,11 +914,11 @@ background:radial-gradient(circle at top,#ffffffaa,transparent 35%),
 @keyframes moverNube{
 
     from{
-        transform:translateX(0);
+        transform:translatex(300px);
     }
 
     to{
-        transform:translateX(140vw);
+        transform:translateX(120vw);
     }
 
 }
