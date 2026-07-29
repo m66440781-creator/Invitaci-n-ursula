@@ -17,16 +17,14 @@ const texto = "Había una vez una pequeña llamada Úrsula Nazareth... que estab
 
 let i = 0;
 
-// Loader
+// Loader permanece hasta tocar la fresa
+
 window.addEventListener("load", () => {
 
-    setTimeout(() => {
-
-        loader.classList.add("oculto");
-
-    }, 2200);
+    loader.classList.remove("oculto");
 
 });
+
 
 // TOQUE DE LA FRESA DE BIENVENIDA
 
@@ -45,7 +43,9 @@ fresaInicio.addEventListener("click", () => {
 
     bienvenida.classList.add("desaparecer");
 
-
+loader.classList.add("oculto");
+contenido.classList.add("mostrar");
+    
     setTimeout(()=>{
 
         bienvenida.style.display="none";
