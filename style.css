@@ -888,6 +888,7 @@ background:radial-gradient(circle at top,#ffffffaa,transparent 35%),
     0%{
         background-position:0% 0%;
     }
+}
 .nube{
     position:absolute;
     opacity:.25;
@@ -899,7 +900,7 @@ background:radial-gradient(circle at top,#ffffffaa,transparent 35%),
 @keyframes moverNube{
 
     from{
-        transform:translatex(300px);
+        transform:translatex(-300px);
     }
 
     to{
