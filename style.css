@@ -1245,3 +1245,35 @@ background:radial-gradient(circle at top,#ffffffaa,transparent 35%),
     0 0 15px #ff69b4;
 
 }
+.bienvenida{
+
+    transition:1.5s ease;
+
+}
+
+
+.bienvenida.salir{
+
+    opacity:0;
+
+    transform:scale(.85);
+
+    filter:blur(8px);
+
+}
+.bienvenida{
+
+    transition:1.5s ease;
+
+}
+
+
+.bienvenida.salir{
+
+    opacity:0;
+
+    transform:scale(.85);
+
+    filter:blur(8px);
+
+}
