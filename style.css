@@ -188,19 +188,6 @@ body{
 .tapa{
     z-index:5;
 }
-    transform:translate(-50%,-50%);
-    width:90px;
-    height:90px;
-    border-radius:50%;
-    background:#fff;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size:42px;
-    box-shadow:0 0 25px rgba(255,105,180,.4);
-    animation:latido 2s infinite;
-    z-index:6;
-}
 
 .carta h2{
     position:absolute;
