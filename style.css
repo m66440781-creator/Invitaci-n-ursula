@@ -872,3 +872,33 @@ background:radial-gradient(circle at top,#ffffffaa,transparent 35%),
         caerFlor 16s linear infinite,
         girarFlor 8s linear infinite;
 }
+/*==================================
+   FONDO MÁGICO ROSITA FRESITA
+==================================*/
+
+.fondo{
+    background:linear-gradient(
+        180deg,
+        #ffd7ea 0%,
+        #ffc5df 45%,
+        #ffeaf5 75%,
+        #fffafc 100%);
+    background-size:100% 300%;
+    animation:fondoMagico 15s ease infinite;
+}
+
+@keyframes fondoMagico{
+
+    0%{
+        background-position:0% 0%;
+    }
+
+    50%{
+        background-position:0% 100%;
+    }
+
+    100%{
+        background-position:0% 0%;
+    }
+
+}
