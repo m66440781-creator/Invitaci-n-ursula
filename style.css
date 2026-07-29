@@ -1202,3 +1202,46 @@ background:radial-gradient(circle at top,#ffffffaa,transparent 35%),
     backdrop-filter:blur(5px);
 
 }
+/* BOTÓN FRESA MÁGICO */
+
+#fresaInicio{
+
+    animation:
+    latidoFresa 2s infinite,
+    brilloFresa 2s infinite alternate;
+
+}
+
+
+@keyframes latidoFresa{
+
+    0%,100%{
+        scale:1;
+    }
+
+    50%{
+        scale:1.12;
+    }
+
+}
+
+
+#fresaInicio::after{
+
+    content:"Tócame";
+
+    display:block;
+
+    font-family:'Pacifico',cursive;
+
+    font-size:22px;
+
+    color:#d83d7a;
+
+    margin-top:8px;
+
+    text-shadow:
+    0 0 8px #fff,
+    0 0 15px #ff69b4;
+
+}
