@@ -908,3 +908,77 @@ background:radial-gradient(circle at top,#ffffffaa,transparent 35%),
     }
 
 }
+
+/* =========================
+   FOTO DE ÚRSULA BIENVENIDA
+========================= */
+
+.foto-ursula{
+
+    width:220px;
+    max-width:70vw;
+
+    margin-bottom:15px;
+
+    border-radius:50%;
+
+    filter:
+    drop-shadow(0 0 12px #fff)
+    drop-shadow(0 0 25px #ff69b4);
+
+    animation:
+    aparecerUrsula 1.8s ease,
+    flotarUrsula 3s ease-in-out infinite;
+
+}
+
+
+#mensajeBienvenida{
+
+    text-align:center;
+
+    font-size:1.15rem;
+
+    color:#87556a;
+
+    line-height:1.6;
+
+    max-width:300px;
+
+}
+
+
+@keyframes aparecerUrsula{
+
+    0%{
+
+        opacity:0;
+        transform:scale(.5);
+
+    }
+
+    100%{
+
+        opacity:1;
+        transform:scale(1);
+
+    }
+
+}
+
+
+@keyframes flotarUrsula{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+}
