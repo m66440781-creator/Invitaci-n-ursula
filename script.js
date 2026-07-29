@@ -71,11 +71,12 @@ sobre.addEventListener("click", () => {
 
         escribirHistoria();
 
-        crearFlores(20);
-        crearFresas(15);
-        crearMariposas(4);
-        crearEstrellas(40);
+        crearFlores(18);
+        crearFresas(12);
+        crearMariposas(6);
+        crearEstrellas(50);
         crearNubes(10);
+        crearArboles(8);
         crearArboles();
         
         if(typeof confetti === "function"){
@@ -251,18 +252,22 @@ function crearNubes(cantidad){
 
 function crearArboles(){
 
-    const izquierda=document.createElement("div");
-    izquierda.className="arbol";
-    izquierda.innerHTML="🍓🌳";
+    const posiciones = [4, 22, 48, 72, 90];
+    const tamaños = [95, 70, 105, 75, 90];
 
-    const derecha=document.createElement("div");
-    derecha.className="arbol";
-    derecha.innerHTML="🌳🍓";
+    posiciones.forEach((x, i)=>{
 
-    izquierda.style.left="10px";
-    derecha.style.right="10px";
+        const arbol = document.createElement("div");
 
-    document.body.appendChild(izquierda);
-    document.body.appendChild(derecha);
+        arbol.className = "arbol";
+        arbol.innerHTML = "🌳";
+
+        arbol.style.left = x + "vw";
+        arbol.style.fontSize = tamaños[i] + "px";
+        arbol.style.animationDelay = (i * .6) + "s";
+
+        document.body.appendChild(arbol);
+
+    });
 
 }
