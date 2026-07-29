@@ -28,6 +28,36 @@ window.addEventListener("load", () => {
 
 });
 
+// TOQUE DE LA FRESA DE BIENVENIDA
+
+fresaInicio.addEventListener("click", () => {
+
+    if(typeof confetti === "function"){
+
+        confetti({
+            particleCount:120,
+            spread:80,
+            origin:{ y:.7 }
+        });
+
+    }
+
+
+    bienvenida.classList.add("desaparecer");
+
+
+    setTimeout(()=>{
+
+        bienvenida.style.display="none";
+
+        sobre.classList.add("entradaSobre");
+
+
+    },1500);
+
+
+});
+
 // Abrir sobre
 sobre.addEventListener("click", () => {
 
