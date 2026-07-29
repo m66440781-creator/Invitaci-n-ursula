@@ -957,15 +957,15 @@ background:radial-gradient(circle at top,#ffffffaa,transparent 35%),
 
 .textoBienvenida{
 
-    position:relative;
+    width:100%;
 
-    max-width:290px;
+    background:rgba(255,255,255,.88);
 
-    background:rgba(255,255,255,.80);
+    padding:18px;
 
-    padding:20px;
+    border-radius:22px;
 
-    border-radius:25px;
+    text-align:center;
 
     box-shadow:
     0 10px 25px rgba(255,105,180,.25);
@@ -1009,11 +1009,21 @@ background:radial-gradient(circle at top,#ffffffaa,transparent 35%),
 }
 #fresaInicio{
 
+    margin-top:20px;
+
     cursor:pointer;
+
+    transition:.3s;
 
     animation:
     latido 2s infinite,
     brilloFresa 2s infinite alternate;
+
+}
+
+#fresaInicio:active{
+
+    transform:scale(.92);
 
 }
 
