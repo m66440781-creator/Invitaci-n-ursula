@@ -1277,3 +1277,40 @@ background:radial-gradient(circle at top,#ffffffaa,transparent 35%),
     filter:blur(8px);
 
 }
+/* =========================
+   FONDO MÁGICO DEL SOBRE
+========================= */
+
+.fondo::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    radial-gradient(circle at 20% 30%, #ffffff80 0 40px, transparent 41px),
+    radial-gradient(circle at 80% 25%, #ffffff70 0 50px, transparent 51px),
+    radial-gradient(circle at 50% 80%, #ffb6d980 0 60px, transparent 61px);
+
+    animation:lucesFondo 8s ease-in-out infinite alternate;
+
+    pointer-events:none;
+
+}
+
+
+@keyframes lucesFondo{
+
+    from{
+        transform:scale(1);
+        opacity:.5;
+    }
+
+    to{
+        transform:scale(1.15);
+        opacity:1;
+    }
+
+}
