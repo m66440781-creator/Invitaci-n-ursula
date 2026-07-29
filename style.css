@@ -1049,3 +1049,40 @@ background:radial-gradient(circle at top,#ffffffaa,transparent 35%),
     }
 
 }
+.bienvenida{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:20px;
+
+    width:90%;
+
+    max-width:700px;
+
+}
+
+@media(max-width:650px){
+
+    .bienvenida{
+
+        flex-direction:column;
+
+    }
+
+    .textoBienvenida::before{
+
+        display:none;
+
+    }
+
+    .textoBienvenida{
+
+        text-align:center;
+
+    }
+
+}
