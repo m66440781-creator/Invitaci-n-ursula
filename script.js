@@ -41,7 +41,7 @@ sobre.addEventListener("click", () => {
         crearFresas(15);
         crearMariposas(4);
         crearEstrellas(40);
-        crearNubes(20);
+        crearNubes(10);
         
         if(typeof confetti === "function"){
 
@@ -199,12 +199,12 @@ function crearNubes(cantidad){
 
         nube.innerHTML="☁️";
 
-        nube.style.left=(-20-Math.random()*30)+"vw";
-        nube.style.top=(5+Math.random()*35)+"vh";
+        nube.style.left=(-10-Math.random()*30)+"vw";
+        nube.style.top=(5+Math.random()*50)+"vh";
 
         nube.style.fontSize=(40+Math.random()*60)+"px";
 
-        nube.style.animationDuration=(50+Math.random()*40)+"s";
+        nube.style.animationDuration=(20+Math.random()*20)+"s";
 
         nube.style.animationDelay=(-Math.random()*40)+"s";
 
