@@ -1130,3 +1130,24 @@ background:radial-gradient(circle at top,#ffffffaa,transparent 35%),
     }
 
 }
+.nombreBienvenida{
+
+    font-family:'Pacifico',cursive;
+
+    color:#e63f82;
+
+    font-size:2.5rem;
+
+    margin-bottom:15px;
+
+    text-align:center;
+
+    text-shadow:
+    0 0 8px #ffb6d9,
+    0 0 20px #ff69b4;
+
+    animation:
+    aparecerTitulo 1.5s ease,
+    brilloNombre 2.5s infinite alternate;
+
+}
