@@ -1034,7 +1034,7 @@ background:radial-gradient(circle at top,#ffffffaa,transparent 35%),
 
 #fresaInicio:active{
 
-    transform:scale(.92);
+    scale:.92;
 
 }
 
@@ -1161,5 +1161,21 @@ background:radial-gradient(circle at top,#ffffffaa,transparent 35%),
     animation:
     aparecerTitulo 1.5s ease,
     brilloNombre 2.5s infinite alternate;
+
+}
+/* AJUSTE FINAL FRESA DE BIENVENIDA */
+
+#fresaInicio{
+
+    position:relative;
+
+    left:auto;
+
+    margin-left:auto;
+    margin-right:auto;
+
+    align-self:center;
+
+    transform:none;
 
 }
