@@ -1056,3 +1056,36 @@ background:radial-gradient(circle at top,#ffffffaa,transparent 35%),
     margin-bottom:20px;
 
 }
+.desaparecer{
+
+    opacity:0;
+    transform:scale(.85);
+    transition:1.5s ease;
+
+}
+
+
+.entradaSobre{
+
+    animation:subirSobre 1.5s ease forwards;
+
+}
+
+
+@keyframes subirSobre{
+
+    from{
+
+        transform:translateY(100vh);
+        opacity:0;
+
+    }
+
+    to{
+
+        transform:translateY(0);
+        opacity:1;
+
+    }
+
+}
