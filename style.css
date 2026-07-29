@@ -1076,14 +1076,14 @@ background:radial-gradient(circle at top,#ffffffaa,transparent 35%),
 
     from{
 
-        transform:translateY(100vh);
+        transform:translate(-50%, 100vh);
         opacity:0;
 
     }
 
     to{
 
-        transform:translateY(0);
+        transform:translate(-50%, -50%);
         opacity:1;
 
     }
