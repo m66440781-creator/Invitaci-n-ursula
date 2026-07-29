@@ -40,7 +40,12 @@ fresaInicio.addEventListener("click", () => {
 
     }
 
+document.getElementById("fresaInicio").onclick = () => {
 
+    document.querySelector(".bienvenida").classList.add("salir");
+
+};
+    
 bienvenida.classList.add("desaparecer");
 
 
