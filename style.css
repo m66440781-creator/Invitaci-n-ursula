@@ -851,3 +851,24 @@ background:radial-gradient(circle at top,#ffffffaa,transparent 35%),
         transform:scale(1.1);
     }
 }
+.fondo{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        180deg,
+        #ffd6eb 0%,
+        #ffc6e2 35%,
+        #ffeaf5 70%,
+        #fff8fc 100%);
+    overflow:hidden;
+}
+.nube{
+    position:absolute;
+    opacity:.18;
+    animation:moverNube 60s linear infinite;
+}
+.flor{
+    animation:
+        caerFlor 16s linear infinite,
+        girarFlor 8s linear infinite;
+}
