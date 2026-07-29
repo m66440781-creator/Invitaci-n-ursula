@@ -1356,27 +1356,24 @@ background:radial-gradient(circle at top,#ffffffaa,transparent 35%),
 
 }
 .arbol{
-
     position:absolute;
-
-    bottom:20px;
-
-    font-size:70px;
-
+    bottom:0;
     z-index:2;
-
-    animation:flotarArbol 4s ease-in-out infinite;
-
+    opacity:.95;
+    animation:flotarArbol 5s ease-in-out infinite;
+    filter:
+        drop-shadow(0 0 8px rgba(255,255,255,.6))
+        drop-shadow(0 0 12px rgba(255,105,180,.25));
 }
 
 @keyframes flotarArbol{
 
     0%,100%{
-        transform:translateY(0);
+        transform:translateY(0) scale(1);
     }
 
     50%{
-        transform:translateY(-6px);
+        transform:translateY(-6px) scale(1.03);
     }
 
 }
