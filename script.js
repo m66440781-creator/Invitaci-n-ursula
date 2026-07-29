@@ -76,7 +76,6 @@ sobre.addEventListener("click", () => {
         crearMariposas(6);
         crearEstrellas(50);
         crearNubes(10);
-        crearArboles(8);
         crearArboles();
         
         if(typeof confetti === "function"){
