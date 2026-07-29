@@ -61,9 +61,19 @@ body{
 }
 
 .fresa{
+
     font-size:70px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    width:100%;
+
     animation:flotar 2s ease-in-out infinite;
+
 }
+
 #fresaInicio{
 
     margin-top:25px;
