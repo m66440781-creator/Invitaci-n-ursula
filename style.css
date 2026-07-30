@@ -1438,3 +1438,27 @@ background:radial-gradient(circle at top,#ffffffaa,transparent 35%),
     z-index:1;
 
 }
+
+.arbusto{
+
+    position:absolute;
+
+    bottom:55px;
+
+    z-index:3;
+
+    font-size:40px;
+
+}
+
+.hongo{
+
+    position:absolute;
+
+    bottom:60px;
+
+    font-size:28px;
+
+    z-index:4;
+
+}
