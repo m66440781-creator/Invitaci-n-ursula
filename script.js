@@ -254,28 +254,6 @@ function crearNubes(cantidad){
 
 function crearArboles(){
 
-    const posiciones = [4, 22, 48, 72, 90];
-    const tamaños = [95, 70, 105, 75, 90];
-
-    posiciones.forEach((x, i)=>{
-
-        const arbol = document.createElement("div");
-
-        arbol.className = "arbol";
-        arbol.innerHTML = "🌳";
-
-        arbol.style.left = x + "vw";
-        arbol.style.fontSize = tamaños[i] + "px";
-        arbol.style.animationDelay = (i * .6) + "s";
-
-        document.body.appendChild(arbol);
-
-    });
-
-}
-
-function crearArboles(){
-
     const arboles=[
         {x:5,s:90},
         {x:18,s:70},
