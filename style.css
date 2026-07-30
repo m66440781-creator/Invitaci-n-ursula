@@ -1377,3 +1377,44 @@ background:radial-gradient(circle at top,#ffffffaa,transparent 35%),
     }
 
 }
+
+@keyframes caerFlor{
+
+    from{
+        top:-120px;
+        transform:rotate(0deg);
+        opacity:0;
+    }
+
+    10%{
+        opacity:1;
+    }
+
+    to{
+        top:110vh;
+        transform:rotate(360deg);
+        opacity:.9;
+    }
+
+}
+
+@keyframes fresaCae{
+
+    from{
+        top:-120px;
+    }
+
+    to{
+        top:110vh;
+    }
+
+}
+.flor{
+    position:absolute;
+    top:-120px;
+}
+
+.fresaFloat{
+    position:absolute;
+    top:-120px;
+}
