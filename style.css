@@ -1418,3 +1418,23 @@ background:radial-gradient(circle at top,#ffffffaa,transparent 35%),
     position:absolute;
     top:-120px;
 }
+.suelo{
+
+    position:absolute;
+
+    left:0;
+    bottom:0;
+
+    width:100%;
+    height:140px;
+
+    background:linear-gradient(
+        #7be45b,
+        #54c843);
+
+    border-top-left-radius:60% 30px;
+    border-top-right-radius:60% 30px;
+
+    z-index:1;
+
+}
