@@ -77,6 +77,8 @@ sobre.addEventListener("click", () => {
         crearEstrellas(50);
         crearNubes(10);
         crearArboles();
+        crearArbustos();
+        crearHongos();
         
         if(typeof confetti === "function"){
 
@@ -267,6 +269,71 @@ function crearArboles(){
         arbol.style.animationDelay = (i * .6) + "s";
 
         document.body.appendChild(arbol);
+
+    });
+
+}
+
+function crearArboles(){
+
+    const arboles=[
+        {x:5,s:90},
+        {x:18,s:70},
+        {x:34,s:110},
+        {x:52,s:80},
+        {x:70,s:105},
+        {x:86,s:75}
+    ];
+
+    arboles.forEach(a=>{
+
+        const arbol=document.createElement("div");
+
+        arbol.className="arbol";
+
+        arbol.innerHTML="🌳";
+
+        arbol.style.left=a.x+"vw";
+
+        arbol.style.fontSize=a.s+"px";
+
+        document.body.appendChild(arbol);
+
+    });
+
+}
+function crearArbustos(){
+
+    for(let i=0;i<10;i++){
+
+        const a=document.createElement("div");
+
+        a.className="arbusto";
+
+        a.innerHTML="🌿";
+
+        a.style.left=(i*10+Math.random()*5)+"vw";
+
+        document.body.appendChild(a);
+
+    }
+
+}
+function crearHongos(){
+
+    const pos=[12,28,47,63,81];
+
+    pos.forEach(x=>{
+
+        const h=document.createElement("div");
+
+        h.className="hongo";
+
+        h.innerHTML="🍄";
+
+        h.style.left=x+"vw";
+
+        document.body.appendChild(h);
 
     });
 
