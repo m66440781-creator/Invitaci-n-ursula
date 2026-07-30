@@ -152,7 +152,8 @@ function crearFresas(cantidad){
 
         fresa.innerHTML="🍓";
 
-        fresa.style.left=Math.random()*100+"vw";
+        fresa.style.left = Math.random()*100 + "vw";
+        fresa.style.top = "-120px";
 
         fresa.style.animationDuration=(8+Math.random()*6)+"s";
 
